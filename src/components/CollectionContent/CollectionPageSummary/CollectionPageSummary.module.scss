@@ -1,0 +1,155 @@
+@import '../../../styles/colors.scss';
+
+.button {
+  text-align: center;
+}
+
+.price-accent {
+  border: 1px solid $base-orange;
+  padding: 5px 25px;
+  border-radius: 4px;
+  color: white;
+  background-color: $base-orange;
+  margin-left: 12px;
+  font-size: 17px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.coaching-accent {
+  border: 1px solid $base-green;
+  padding: 3px 12px;
+  border-radius: 4px;
+  color: white;
+  background-color: $base-green;
+  margin-left: 12px;
+  font-size: 17px;
+  font-weight: 300;
+  white-space: nowrap;
+  width: 225px;
+  align-self: flex-end;
+
+  p {
+    margin: 0 0 0 0;
+  }
+}
+
+.coaching_message {
+  font-size: 17px;
+  font-style: oblique;
+}
+
+.owned-accent {
+  border: 1px solid $base-orange;
+  padding: 3px 12px;
+  border-radius: 4px;
+  color: $base-orange;
+  margin-left: 12px;
+}
+
+.action-accent {
+  border: 1px solid $base-green;
+  padding: 3px 12px;
+  border-radius: 4px;
+  color: $base-green;
+  white-space: nowrap;
+  margin-left: 32px;
+}
+
+.signup-req-accent{
+ white-space: nowrap;
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  font-size: 15px;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+
+  p {
+    margin: 0 0 0 0;
+  }
+}
+
+.call-to-action2 {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 100%;
+
+  p {
+    margin: 0 0 0 0;
+  }
+}
+
+.coaching {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.read {
+  font-size: 12px;
+  color: $base-orange;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.invoice {
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 14px;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $light-grey-for-text;
+  margin-top: 1.5em;
+
+  :global(.peoples-icon),
+  :global(.clocks-icon) {
+    fill : #fff;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    stroke: $green-dark;
+  }
+
+  > span {
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  .views {
+    margin-top: -1px;
+  }
+
+  .continue {
+    color: $base-orange;
+
+  }
+
+  svg {
+    height: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    justify-content: center;
+  }
+}

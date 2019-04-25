@@ -1,0 +1,38 @@
+@import '../../styles/colors.scss';
+
+title() {
+  font-size: 36px;
+  margin-top: 0.30em;
+  margin-bottom: 0.30em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 600;
+  color: #000;
+}
+
+.sub_title {
+  margin-bottom: 20px;
+}
+
+Table thead tr th{
+  text-align: center;
+}
+
+tr td{
+	text-align: center;
+}
+
+.wdth_20{
+ width: 21% !important;
+}
+
+.sales_table {
+  overflow-x: scroll;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width:260px) and (max-width: 767px) {
+  .sales_table {
+    margin-bottom: 150px;
+  }
+}

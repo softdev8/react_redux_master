@@ -1,0 +1,42 @@
+@import '../../../styles/colors.scss';
+
+.b-image-uploader {
+  text-align: center;
+  color: $base-green;
+  width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+  
+  svg {
+    height: 33px;
+    fill: $base-green;
+  }
+
+  &-def-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 3px 0 0;
+    display: inline-block;
+  }
+
+  &-def-subtitle {
+    font-size: 10px;
+  }
+
+  .form-control[type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .b-btn-remove {
+    margin-top: 15px;
+    position: relative;
+    z-index: 4;
+  }
+}

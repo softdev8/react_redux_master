@@ -1,0 +1,9 @@
+@import '../../styles/colors.scss';
+
+.ed_canvas_draw {
+  :global(.repeat-icon) {
+    fill: grey;
+    width: 14px;
+    height: 14px;
+  }
+}

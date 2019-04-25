@@ -1,0 +1,27 @@
+@import '../../../styles/colors.scss';
+
+.container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 2px solid $gray-border2;
+  border-radius: 5px;
+  padding-bottom: 15px;
+
+  :global(.cmcomp-editor-container) {
+    border: none;
+    border-radius: 0;
+  }
+
+  :global(.cmcomp-single-editor-container) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.tabslist {
+  display: table-cell;
+  width: 230px;
+  border-right: 1px solid $gray-border2;
+  padding: 5px;
+}

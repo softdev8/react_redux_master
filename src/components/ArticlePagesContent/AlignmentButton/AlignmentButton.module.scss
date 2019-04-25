@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.button {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  :global(.align-left-icon) {
+    width: 18px;
+    height: 18px;
+    fill: $base-green;
+  }
+  :global(.align-center-icon) {
+    width: 18px;
+    height: 18px;
+    fill: $base-green;
+  }
+  :global(.align-right-icon) {
+    width: 18px;
+    height: 18px;
+    fill: $base-green;
+  }
+
+  &:global(.active) {
+    background-color: $base-green;
+    border: none;
+    box-shadow: none;
+    
+    :global(.align-left-icon) {
+      fill: #fff;
+    }
+    :global(.align-center-icon) {
+      fill: #fff;
+    }
+    :global(.align-right-icon) {
+      fill: #fff;
+    }
+  }
+}

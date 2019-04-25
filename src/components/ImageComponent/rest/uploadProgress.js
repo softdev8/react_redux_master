@@ -1,0 +1,1 @@
+<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size / 1024 | 0) + 'K' : '');</p>

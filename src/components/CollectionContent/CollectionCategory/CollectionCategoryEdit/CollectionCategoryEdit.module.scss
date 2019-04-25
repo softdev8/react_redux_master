@@ -1,0 +1,119 @@
+@import '../../../../styles/colors.scss';
+
+.category {
+  position: relative;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.drag {
+  position: absolute;
+  background-color: $green-dark;
+  opacity: .5;
+  width: 42px;
+  height: 42px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 1;
+    cursor: move;
+  }
+
+  svg {
+    fill: #fff;
+    height: 21px;
+  }
+}
+
+.header {
+  margin-bottom: 25px;
+  position: relative;
+  padding: 7px 0 0 15px;
+
+  .remove-category {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    svg {
+      stroke: $base-green;
+      height: 12px;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  color: $zeus;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.icon-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    height: 16px;
+    fill: $base-green
+  }
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.list-item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer {
+  text-align: right;
+
+  :global(.b-btn) {
+    width: 165px;
+    height: 38px;
+    font-size: 12px;
+  }
+}
+
+.default {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 850px) {
+  .drag {
+    top: 0;
+    left: -42px;
+  }
+}

@@ -1,0 +1,23 @@
+.canvasAnimationThumbnailStrip {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: auto;
+  position: static;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #f5f4f4;
+
+
+}
+
+.canvasAnimationAddThumbnail{
+    position: absolute;
+    bottom: -5px;
+
+  cursor:pointer;
+  cursor:hand;
+  //border: 1px dashed #ddd;
+
+  
+}

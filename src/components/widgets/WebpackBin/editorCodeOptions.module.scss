@@ -1,0 +1,54 @@
+@import '../../../styles/colors.scss';
+
+.wrapper {
+  font-size: 14px;
+  border-bottom: 1px solid $runjs-separator-color;
+  margin-bottom: 5px;
+  padding: 10px;
+  line-height: 45px;
+}
+
+.label {
+  font-weight: normal;
+  padding: 5px;
+  display: inline-flex;
+  width: auto;
+  align-items: baseline;
+  margin: 3px 15px 3px 3px;
+  border: 1px solid $light-gray-border;
+
+  :global(.form-group) {
+    margin: 0;
+    display: inline-block;
+  }
+
+  :global(.checkbox) {
+    margin-top:0px;
+    margin-bottom: 0;
+    margin-left: 10px;
+
+    input[type=checkbox] {
+      position: relative;
+    }
+  }
+
+  :global(.form-control) {
+    font-size: 15px;
+    width: 60px;
+  }
+
+  &-theme {
+    :global(.form-control) {
+      font-size: 15px;
+      width: 130px;
+    }
+  }
+
+  :global(span) {
+    margin-right: 25px;
+  }
+}
+
+.inputOptions {
+  font-size: 10px;
+}

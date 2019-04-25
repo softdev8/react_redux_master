@@ -1,0 +1,37 @@
+.canvas-widget {
+  display: block;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.canvas {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.widgets {
+  flex-shrink: 0;
+  max-width: 170px;
+}
+
+.canvas-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  :global(.canvas-container) {
+    margin: 0 auto;
+    border: 1px solid #ddd;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: auto !important;
+  }
+}

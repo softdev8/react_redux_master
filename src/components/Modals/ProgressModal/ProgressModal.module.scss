@@ -1,0 +1,11 @@
+@import '../../../styles/colors.scss';
+
+.progress {
+  display: block;
+ 
+   :global(.b-status-control) {
+   	text-align: center;
+    top: 0;
+//    margin: 20px 5px;
+  }
+}

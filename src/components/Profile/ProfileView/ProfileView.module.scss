@@ -1,0 +1,55 @@
+@import '../../../styles/colors.scss';
+
+.wrapper {}
+
+.profile-view {
+  width: 100%;
+  margin: 0 0 25px;
+  background-color: $base-green;
+  padding-top: 45px;
+}
+
+.inn {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 300;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.username {
+  font-size: 24px;
+  margin: 0 0 15px;
+  font-weight: bold;
+}
+
+.website {
+  font-size: 14px;
+  color: blue;
+  margin-bottom: 17px;
+
+  :global(.b-some-with-icon svg) {
+    height: 17px;
+  }
+}
+
+.shortbio {
+  color: white;
+  font-size: 21px;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.fullbio {
+  font-size: 19px;
+  margin: 0 auto;
+}
+
+@import '_ProfileViewSocial.module.scss';
+
+@media (min-width: 660px) {
+  .profile-view {
+    padding-top: 75px;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+
+.page-cover {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $green-light;
+
+  :global(.b-image-uploader) {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 50%;
+    margin: 0 auto auto -100px;
+  }
+}
+
+.empty {
+  background-color: $green-light;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

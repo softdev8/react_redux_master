@@ -1,0 +1,73 @@
+@import '../../../styles/colors.scss';
+
+.profile-feature {
+  position: relative;
+  max-height: 600px;
+
+  :global(.b-image-uploader) {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 50%;
+    margin: 0 auto auto -100px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  :global(.b-page_profile .b-page-header) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .profile-feature {
+
+    &.empty {
+      height: 20vh;
+    }
+  }
+}
+
+@media (max-height: 600px) and (max-width: 480px) {
+  .profile-feature {
+    height: calc(100vh - 60px);
+  }
+}
+
+@media (min-height: 601px) and (max-width: 480px) {
+  .profile-feature {
+    height: 80vh;
+  }
+}
+
+
+@media (min-width: 481px) {
+
+  .profile-feature {
+    height: 50vmax;
+
+    &.empty {
+      height: 200px;
+    }
+
+    &.write {
+
+      :global(.b-image-uploader) {
+        top: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1075px) {
+
+  .profile-feature.write {
+
+    :global(.b-image-uploader) {
+      top: 30%;
+    }
+  }
+}

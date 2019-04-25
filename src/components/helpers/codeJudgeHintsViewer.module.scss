@@ -1,0 +1,48 @@
+@import '../../styles/colors.scss';
+
+.hintContainer {
+  border-top: 1px dotted $base-green;
+  border-bottom:: 1px dotted $base-green;
+}
+
+.hintWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.prevButtonWrapper {
+  width: 100px;
+  margin: 0 auto;
+  text-align: left;
+  cursor: pointer;
+}
+
+.prevButton {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #f5f5f5;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+}
+
+.nextButtonWrapper {
+  width: 100px;
+  margin: 0 auto;
+  text-align: right;
+  cursor: pointer;
+}
+
+.nextButton {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #f5f5f5;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+}
+
+.markdownViewer {
+  width: 90%;
+  padding: 0px 20px;
+}

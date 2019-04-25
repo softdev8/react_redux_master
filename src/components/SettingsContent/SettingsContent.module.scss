@@ -1,0 +1,47 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.settings {
+  display: block;
+
+  :global(.form-group) {
+    @include clearfix();
+  }
+
+  :global(.control-label) {
+    font-weight: 400;
+    text-align: right;
+  }
+
+  :global(.b-status-control) {
+    margin-bottom: 30px;
+  }
+}
+
+.set {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid $green-dark;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 400;
+  color: $zeus;
+  padding-left: 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .title {
+    text-align: left;
+  }
+}

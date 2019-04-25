@@ -1,0 +1,37 @@
+@import '../../../styles/colors.scss';
+
+.copyright {
+  background-color: $green-light;
+  text-align: center;
+  color: #58bd91;
+  padding: 40px 0 50px;
+}
+
+.brand {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0 0 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.icons {
+  margin-bottom: 20px;
+
+  :global(.fa) {
+    margin: 5px;
+    font-size: 20px;
+  }
+}
+
+.copy {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 0;
+  
+  a {
+    color: #337ab7;
+  }
+}

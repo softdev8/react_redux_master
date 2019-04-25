@@ -1,0 +1,8 @@
+@import '../../../styles/colors.scss';
+
+.checkout {
+  
+  :global(.b-modal-window__close svg) {
+    stroke: #fff;
+  }
+}

@@ -1,0 +1,121 @@
+@import './helpers/runjsMixins';
+@import '../../../../../styles/colors.scss';
+
+.runjs-container {
+  @each $type in $runjs-codes { // toggle {btn,pane}
+    &.hide-code-#{$type} {
+      @include hideCode($type);
+    }
+  }
+
+  @each $pane in $runjs-panes { // pane index tag name
+    $i: index($runjs-panes, $pane);
+    :global(.runjs-pane-#{$pane}:before) {
+      @include content(nth($panes-names, $i));
+    }
+  }
+
+  &.html-has-border {
+    @include paneBorder('html');
+  }
+  &.css-has-border {
+    @include paneBorder('css');
+  }
+
+  :global(.runjs-nav) {
+    margin: 0;
+    padding: 0;
+    height: 33px;
+  }
+
+  :global(.runjs-nav-list) {
+    position: relative;
+    text-align: center;
+    margin: 0px 0px 10px;
+    border-bottom: 1px solid rgba($grey-for-icon, 0.6);
+
+    :global(.runjs-nav-item) {
+      padding: 0px 5px;
+      margin: 3px 5px 0;
+      border-bottom: 5px solid $runjs-tabs-select;
+      float: none;
+      cursor: pointer;
+      display: inline-block;
+      width: auto !important;
+      pointer-events: auto;
+      :global(a) {
+        color: #555;
+        line-height: 24px;
+      }
+    }
+  }
+
+  :global(.runjs-nav-result) {
+    border-top: 1px solid #CECECE;
+  }
+
+  :global(.runjs-pane) {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      background: #F7F7F7;
+      border: 1px solid #EFEFEF;
+      color: #A3A3A3;
+      padding: 0px 7px;
+      font-size: 12px;
+      height: 18px;
+      line-height: 16px;
+      margin: 3px 5px;
+      right: 13px;
+      z-index: 9;
+      @include transition(opacity, .25s, ease-in-out);
+    }
+    &:hover:before {
+      opacity: .2;
+    }
+  }
+
+  :global(.focus-pane:before) {
+    opacity: .1;
+  }
+
+  :global(.result-single-pane:before) {
+    content: none;
+  }
+
+  :global(.runjs-panes-row) {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    :global(.runjs-pane-cell) {
+      display: table-cell;
+      width: 1%;
+      position: relative;
+
+      :global(.cmcomp-editor-container) {
+        border: none;
+        border-radius: 0;
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
+
+        :global(> .CodeMirror) {
+          height: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  :global(.runjs-pane-result) {
+    :global(iframe) {
+      border: none;
+    }
+  }
+}
+
+.dualHeightBorderStyle {
+  border-top: 1px solid $runjs-separator-color;
+}

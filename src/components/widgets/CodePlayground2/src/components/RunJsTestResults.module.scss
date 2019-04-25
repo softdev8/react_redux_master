@@ -1,0 +1,38 @@
+@import '../../../../../styles/colors.scss';
+
+.testResultWrapper {
+  border-top: 1px solid $runjs-border-color;
+  padding-top: 10px;
+}
+
+.reasonError {
+  color: $execErrorText;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.reasonSuccess{
+  color: $codeJudgeSuccess;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.stderrTitle {
+  color: $execErrorText;
+  font-size: 14px;
+}
+
+.stderrText {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.stdoutTitle {
+  color: $execStdoutText;
+  font-size: 14px;
+}
+
+.stdoutText {
+  font-weight: 300;
+  font-size: 15px;
+}

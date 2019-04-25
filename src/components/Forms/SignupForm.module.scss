@@ -1,0 +1,72 @@
+@import '../../styles/colors.scss';
+
+.register {
+  :global(.b-modal-header) {
+    position: relative;
+    z-index: 1;
+  }
+
+  :global(.b-modal-header__title) {
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0 0 25px;
+    color: #fff;
+    position: relative;
+  }
+}
+
+.header-image {
+  background: $green-dark;
+  position: absolute;
+  background-position: 50%;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-text {
+  margin: 0 auto;
+  font-size: 19px;
+  font-weight: 300;
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.anchor-for-signup-icon {
+  position: relative;
+}
+.signup-checked-icon {
+  position: absolute;
+  right: 6px;
+  top: 11px;
+  margin: 0px;
+}
+
+.signup-warning-icon {
+  position: absolute;
+  right: 6px;
+  top: 11px;
+  margin: 0px;
+}
+
+.warning-tooltip {
+  z-index: 99999999;
+
+  :global(.tooltip-arrow) {
+    position: absolute;
+    margin-left: 0px !important;
+    border-bottom-color: #e36054 !important;
+    opacity: .8;
+  }
+  :global(.tooltip-inner) {
+    padding: 3px 8px;
+    color: #ffffff;
+    background-color: #e36054;
+    opacity: .8;
+  }
+}
+

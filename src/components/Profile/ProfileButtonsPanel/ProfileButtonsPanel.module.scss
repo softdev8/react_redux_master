@@ -1,0 +1,52 @@
+
+@import '../../../styles/colors.scss';
+
+@media (max-width: 480px) {
+
+  :global(.b-page_profile .b-sticky-panel) {
+    top: 60px;
+
+    &:global(.fixed) {
+      top: 0;
+    }
+  }
+
+}
+
+.buttons {
+  width: 100%;
+  text-align: right;
+
+  :global(.container) {
+    width: 100%;
+    padding: 0;
+  }
+
+  :global(.b-btn) {
+    width: 33.3%;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 478px) {
+
+  .buttons {
+    width: auto;
+    
+    :global(.b-btn) {
+      width: 148px;
+    }
+  }
+}
+
+@media (min-width: 1075px) {
+
+  .buttons {
+
+    :global(.container) {
+      width: 1045px;
+      padding-right: 0;
+    }
+  }  
+}

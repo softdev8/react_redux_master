@@ -1,0 +1,22 @@
+.form {
+  position: relative;
+
+  :global(.form-group) {
+    margin: 0;
+  }
+
+  :global(.form-control) {
+    padding: 0;
+    height: 20px;
+    font-size: 14px;
+  }
+}
+
+.button {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  padding: 0;
+  border: none;
+}

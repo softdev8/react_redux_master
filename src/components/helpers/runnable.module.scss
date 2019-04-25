@@ -1,0 +1,190 @@
+@import '../../styles/colors.scss';
+
+.run {
+  margin-top: 3px;
+  :global(.play-icon) {
+    fill: #FFFFFF;
+    width: 18px;
+    height: 18px;
+  }
+
+  :global(.close-icon) {
+    stroke: black;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.run_button {
+  width: 80px;
+  padding: 0;
+}
+
+.stdin_button {
+  width: 140px;
+  padding: 0;
+  margin-left: 5px;
+
+  &:hover,
+  &:active,
+  &:global(.active),
+  &:global(.active:focus) {
+    background-color: $green-light;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $green-light;
+  }
+}
+
+.input_output{
+  border-top: 2px solid $base-green;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  display: block;
+  overflow: scroll;
+  transition: max-height 0.5s;
+  border-bottom: 2px solid $base-green;
+}
+
+.initial_height{
+  max-height: 90px;
+}
+
+.limit_height{
+  max-height: 200px;
+}
+
+.executon_result{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 5px;
+  color: #000000;
+}
+
+.execution_file{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #000000;
+}
+
+.img_center{
+  display: block;
+  margin: auto;
+  width: 23%;
+  text-align: center;
+}
+
+.input_output div.carousel_height{
+  width: auto !important;
+  margin-right: 18px;
+  overflow: hidden;
+  height: 134px !important;
+}
+
+.margn{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #000000;
+  margin-top: 10px;
+  padding: 5px;
+  margin-left: 6%;
+}
+
+.dwnld_btn_center{
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.dwnld_btn{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  padding: 15px;
+  margin-top: 30px;
+  color: #ffffff;
+  border: none;
+  background-color: $base-green;
+}
+
+.stdin{
+  width: 100%;
+  border: 1px solid $light-grey;
+}
+
+.reason_success{
+  color: $base-green;
+}
+
+.reason_error{
+  color: $execErrorText;
+}
+
+.stdlabels{
+  border-bottom: 1px solid black;
+}
+
+.temp_text {
+  text-align: center;
+  cursor: pointer;
+  cursor: hand;
+  color: $light-grey-for-text;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.custom_expand{
+  color:#000;
+}
+button.close {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…UgLTEuMjUsLTEuMjUgNy41LC03LjUgLTcuNSwtNy41IHoiIGZpbGw9IiNGRkYiLz48L3N2Zz4=") no-repeat 50%;
+}
+.input_output {
+  :global(.carousel_style){
+    right: 20px;
+  }
+
+  :global(a.carousel-control){
+    width: 5%;
+    height: 37%;
+    top: 30%;
+    background: white;
+  }
+
+  :global(ol.carousel-indicators){
+    display: none;
+  }
+
+  :global(a.carousel-control .glyphicon-chevron-left):before {
+    font-family: FontAwesome;
+    padding-left: 11px;
+    content: "\f053";
+    color: black;
+    font-size: 20px;
+  }
+
+  :global(a.carousel-control .glyphicon-chevron-right):before {
+    font-family: FontAwesome;
+    padding-left: 30px;
+    content: "\f054";
+    color: black;
+    font-size: 20px;
+  }
+
+  :global(div.carousel-inner){
+    width: 97%;
+  }
+}
+
+:global(button.ril-close){
+  margin-bottom: 7px;
+}
+
+:global(button.ril-close):before{
+  font-family: FontAwesome;
+  content: "\f00d";
+  color: white;
+}

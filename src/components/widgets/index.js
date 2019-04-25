@@ -1,0 +1,40 @@
+require('./widgets.scss');
+
+// export { default as Image } from './ImageComponent';
+export Canvas from './Canvas/canvas';
+export CanvasComponentView from './CanvasComponentView/CanvasComponentView';
+export CanvasText from './CanvasText/CanvasText';
+export CanvasImage from './CanvasImage/CanvasImage';
+export Image from './Image/image';
+export { default as BinaryTree } from './binaryTree';
+export { default as CanvasAnimation } from './canvasAnimation';
+export { default as Chart } from './Chart/chart';
+export { default as Code } from './code';
+export { default as Datagrid } from './dataGrid';
+export { default as EducativeArray } from './array';
+export { default as Equation } from './equation';
+export { default as File } from './File/File';
+export { default as Flowchart } from './flowChart';
+export { default as Graph } from './Graph/graph';
+export { default as Graphviz } from './graphviz';
+export { default as HashTable } from './hashTable';
+export { default as Heading } from './heading';
+export { default as ItemsList } from './itemsList';
+export { default as LinkedList } from './linkedList';
+export { default as MarkdownEditor } from './markdownEditor/markdownEditor';
+export { default as MarkdownPaste} from './markdownPaste';
+export { default as Matrix } from './Matrix/matrix';
+export { default as NaryTree } from './naryTree';
+export { default as Quiz } from './quiz';
+export { default as RunJS } from './CodePlayground2';
+export { default as SequenceDiagram } from './sequenceDiagram';
+export { default as Stack } from './stack';
+export { default as SVG } from './svgEditNonModal';
+export { default as SVGEdit } from './svgEdit';
+export { default as MxGraph } from './MxGraph';
+export { default as TabbedCode } from './multitabCode';
+export { default as TextEditor } from './mediumEditor';
+export { default as Video } from './video/video';
+export { default as WebpackBin } from './WebpackBin';
+export { default as SequenceDiagrams } from './SequenceDiagrams/SequenceDiagrams'
+export { default as SpoilerEditor } from './Spoiler/spoilerEditor'

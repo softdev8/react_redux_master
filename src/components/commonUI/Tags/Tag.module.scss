@@ -1,0 +1,86 @@
+@import '../../../styles/colors.scss';
+
+.tag {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: $base-green;
+  color: #fff;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $green-dark;
+    cursor: pointer;
+  }
+
+  :global(.fa) {
+    margin-left: 4px;
+  }
+}
+
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: inherit;
+  width: 100%;
+  background-color: #fff;
+  padding: 5px 20px;
+
+  &.empty {
+    padding-left: 0;
+  }
+}
+
+.list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+
+  li {
+    margin: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    :global(.times-icon) {
+      width: 14px;
+      height: 14px;
+      fill: #fff;
+    }
+  }
+}
+
+.input {
+  display: inline-block;
+  min-height: 35px;
+  line-height: 35px;
+}
+
+:global(.form-horizontal .b-input-with-label) {
+  .input {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .tags {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  :global(.form-horizontal .b-input-with-label) {
+    .input {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

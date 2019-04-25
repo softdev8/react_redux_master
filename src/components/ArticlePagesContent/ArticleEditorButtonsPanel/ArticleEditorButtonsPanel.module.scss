@@ -1,0 +1,34 @@
+@import '../../../styles/colors.scss';
+
+.panel {
+
+  .inn {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba($green-light, .75);
+    min-height: 34px;
+
+    :global(.b-btn) {
+      min-width: auto;
+      font-size: 12px;
+    }
+
+    :global(.b-btn_default) {
+      color: $green-dark;
+    }
+  }
+}
+
+@media (min-width: 678px) {
+  .panel {
+
+    .inn {
+
+      .buttons {
+        :global(.b-btn) {
+          min-width: 134px;
+        }
+      }
+    }
+  }
+}

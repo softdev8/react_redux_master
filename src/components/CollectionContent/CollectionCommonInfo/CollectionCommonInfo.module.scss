@@ -1,0 +1,44 @@
+@import '../../../styles/colors.scss';
+
+.common-info {
+  margin-top: -35px;
+  padding-right: 15px;
+  overflow: hidden;
+  color: #fff;
+  background-color: $base-orange;
+  
+  &.draft,
+  &.published {
+    display: block;
+  }
+
+  :global(.docs-icon) {
+    height: 19px;
+  }
+}
+
+.left {
+  float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 33px;
+  padding: 0 10px;
+}
+
+.type {
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.right {
+  float: right;
+  line-height: 34px;
+  text-align: right;
+}
+
+.date {
+  font-size: 10px;
+  margin-left: 15px;
+}

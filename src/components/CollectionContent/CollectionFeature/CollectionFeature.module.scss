@@ -1,0 +1,26 @@
+@import '../../../styles/colors.scss';
+
+.collection-feature {
+  position: relative;
+
+  :global(.b-image-uploader) {
+    svg {
+      fill: $base-green;
+    }
+  }
+
+  :global(.b-image-uploader-def-title),
+  :global(.b-image-uploader-def-subtitle) {
+    color: $base-green;
+  }
+
+  &.empty {
+    background-color: $green-light;
+    height: 300px;
+  }
+}
+
+.read {
+  background-color: #ccc;
+}
+

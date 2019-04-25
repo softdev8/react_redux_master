@@ -1,0 +1,49 @@
+@import '../../styles/colors.scss';
+
+@mixin title() {
+  font-size: 36px;
+  font-family: Cinzel, Ariel, Georgia, serif;
+  margin-top: 0.30em;
+  margin-bottom: 0.30em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.summary {
+  margin-bottom: 20px;
+  padding-top: 34px;
+
+  .titleandauthor{
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .title {
+    @include title();
+    padding-left: 20px;
+  }
+
+  .author {
+    padding: 10px 20px;
+  }
+
+  .description {
+    margin-bottom: 0;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .descriptionText {
+    color: black;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: sans-serif;
+    white-space: pre-wrap;
+  }
+}

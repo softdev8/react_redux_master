@@ -1,0 +1,31 @@
+@import '../../../styles/colors.scss';
+
+.previewable {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  > li {}
+}
+
+.article {
+  padding: 7px 0;
+  display: inline-block;
+
+  &:hover {
+    color: $green-dark;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .article {
+    text-decoration: underline;
+    color: #333;
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+}

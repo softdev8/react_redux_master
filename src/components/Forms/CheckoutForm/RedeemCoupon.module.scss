@@ -1,0 +1,90 @@
+@import '../../../styles/colors.scss';
+
+.redeem {
+  margin-bottom: 20px;
+  padding-right: 15px;
+}
+
+.link {
+  color: $green-dark;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form {
+  :global(.form-control) {
+    font-size: 14px;
+    height: 28px;
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      font-size: 14px;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      font-size: 14px;
+    }
+
+    &:-ms-input-placeholder {  
+      font-size: 14px;
+    }
+  }
+
+  :global(.form-group) {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 70%;
+  }
+
+  :global(.b-btn[type='submit']) {
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 300;
+    height: auto;
+    width: auto;
+  }
+}
+
+.entered {
+  font-size: 12px;
+  
+  .title {
+    color : #a9a9a9;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .coupon {
+    color: $green-dark;
+    vertical-align: middle;
+  }
+
+  :global(.fa) {
+    margin-left: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #666;
+    vertical-align: middle;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .price {
+    float: right;
+    font-size: 14px;
+  }
+}
+
+.error {
+  color: $base-orange;
+  font-size: 10px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/colors.scss';
+
+//NProgress overrides
+#nprogress .bar {
+  background: $base-orange;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $base-orange, 0 0 5px $base-orange;
+}
+
+#nprogress .spinner {
+  top: 8px;
+  right: 25px;
+}
+
+#nprogress .spinner-icon {
+  width: 42px;
+  height: 42px;
+  border: solid 1px transparent;
+  border-top-color: $base-orange;
+  border-left-color: $base-orange;
+
+}

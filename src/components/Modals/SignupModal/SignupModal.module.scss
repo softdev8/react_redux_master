@@ -1,0 +1,37 @@
+@import '../../../styles/colors.scss';
+
+.register {
+  display: block;
+
+  :global(.b-input-with-label_simple) {
+    margin-bottom: 10px;
+  }
+
+  :global(.b-modal__separator i) {
+    top: 26%;
+  }
+
+  :global(.b-modal-window__close svg) {
+    stroke: #fff;
+  } 
+}
+
+.header-image {
+  position: absolute;
+  background-image: url(http://localhost:4444/static/dist/imgs/profile-banner-1.jpg);
+  background-position: 50%;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header-text {
+  margin: 0 auto;
+  font-size: 14px;
+  color: #fff;
+  width: 250px;
+  text-align: center;
+}

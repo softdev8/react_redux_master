@@ -1,0 +1,57 @@
+@import '../../../styles/colors.scss';
+
+.block {
+  color: #fff;
+  width: 100%;
+  background-color: rgba($base-orange, .9);
+  padding: 45px;
+
+  .inn {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .inn {
+      width: 100% !important;
+    }
+  }
+
+  .buttons {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+
+    .button {
+      background-color: transparent;
+      border: 2px solid #fff;
+      box-shadow: none;
+      font-size: 20px;
+      padding: 6px 25px;
+      transition: all .2s;
+    }
+  }
+}
+
+.text {
+  line-height: 2;
+  margin-top : 25px;
+  margin-bottom : 25px;
+  letter-spacing: .5px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.widgets_image {
+ opacity: .7;
+ border-radius: 8px;
+}
+
+.widgets_image_container{
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}

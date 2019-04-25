@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.caption {
+  padding: 3px 5px 3px 5px;
+  margin-top: 5px;
+
+  :global(.form-group) {
+    margin-bottom: 0px;
+
+    &::-webkit-input-placeholder {
+      font-size: 18px;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      font-size: 18px;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      font-size: 18px;
+    }
+
+    &:-ms-input-placeholder {  
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../styles/colors.scss';
+
+.tab {
+  display: inline-block;
+  padding: 5px 10px;
+  color: $base-green;
+  cursor: pointer;
+  transition: color .2s;
+
+  &:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: $green-dark;
+  }
+
+  &:global(.active) .inn {
+    border-color: $base-green;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .tab {
+    padding: 5px 5px;
+  }
+}
+
+.inn {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s;
+}

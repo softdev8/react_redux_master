@@ -1,0 +1,82 @@
+@import '../../../styles/colors.scss';
+
+.header {
+  height: 60px;
+  /*top:0;*/
+  background-color: none;
+  color: #aaa;
+  padding: 0 15px;
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+}
+
+.buttons {
+  margin-right: 25px;
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 40px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_clean {
+      color: #fff;
+    }
+
+    &_green {
+      color: $green-dark;
+    }
+
+    &_orange {
+      color: $base-orange;
+    }
+
+    &_primary {
+      background-color: $base-green;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .buttons {
+    .author_button {
+      display: none;
+    }
+
+    .button {
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width : 768px) {
+  .buttons {
+    margin-right: 0;
+
+    .button {
+      margin-left: 10px;
+    }
+  }
+}

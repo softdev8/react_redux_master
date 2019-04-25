@@ -1,0 +1,68 @@
+@import '../../../styles/colors.scss';
+
+.controls {
+  position: absolute;
+  right: 0px;
+  top: -45px;
+  width: 210px;
+  transition: opacity .2s;
+}
+
+.list {
+
+  :global(.move-icon) {
+    height: 28px;
+    fill: $light-grey-for-icon2;
+  }
+
+  :global(.b-btn) {
+    background-color: white;
+    height: 40px;
+    width: 50px;
+    padding: 0;
+
+    :global(.eye-icon),
+    :global(.edit-icon),
+    :global(.clone-icon),
+    :global(.trash-icon) {
+      width: 18px;
+      height: 18px;
+      fill: $light-grey-for-icon2;
+    }
+
+    &:hover,
+    &:active,
+    &:global(.active),
+    &:global(.active:focus) {
+      background-color: white;
+
+      :global(.move-icon),
+      :global(.edit-icon),
+      :global(.eye-icon),
+      :global(.clone-icon),
+      :global(.trash-icon) {
+        fill: $light-grey-for-icon;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      background-color: white;
+    }
+  }
+
+}
+
+@media (min-width: 1050px) {
+  .controls {
+    right: -55px;
+    top: -1px;
+    width: 50px;
+  }
+
+  .list {
+    :global(.b-btn) {
+      width: 100%;
+    }
+  }
+}

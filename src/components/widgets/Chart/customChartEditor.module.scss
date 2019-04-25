@@ -1,0 +1,21 @@
+.customChartConfigEditor {
+  padding-top: 10px;
+}
+
+.customChartLeft {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  max-height: 60vh;
+}
+
+.customChartRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+

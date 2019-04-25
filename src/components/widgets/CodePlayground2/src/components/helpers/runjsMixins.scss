@@ -1,0 +1,40 @@
+@import '../../../../../../styles/colors.scss';
+
+$runjs-codes: 'html', 'css', 'js';
+$runjs-panes: 'html', 'css', 'js', 'result';
+$panes-names: 'html', 'css', 'javascript', 'output';
+
+borderRight {
+  border-right: 4px inset $runjs-separator-color;
+}
+
+@mixin hideCode($type) {
+  :global(.runjs-nav-item-#{$type}) {
+    filter: alpha(opacity=65);
+    opacity: .35;
+    background: rgba(236,236,236,0.92);
+    background: linear-gradient(rgba(249,249,249,0.92), rgba(236,236,236,0.92));
+  }
+  :global(.runjs-pane-#{$type}) {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@mixin paneBorder($type) {
+  :global(.runjs-pane-#{$type}) {
+    @extend borderRight;
+  }
+}
+
+@mixin content($val) {
+  content: $val;
+}
+
+@mixin transition($attr, $time, $effect) {
+  transition: $attr $time $effect;
+  -o-transition: $attr $time $effect;
+  -ms-transition: $attr $time $effect;
+  -moz-transition: $attr $time $effect;
+  -webkit-transition: $attr $time $effect;
+}

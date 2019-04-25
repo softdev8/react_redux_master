@@ -1,0 +1,293 @@
+/* carbondream - Copyright 2015 Zeroarc Software, LLC
+ *
+ */
+
+/* CSS resets */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+
+/*
+ * General helper classes
+ */
+
+.hidden {
+  display: none;
+}
+
+
+/*
+ * Mode switches
+ */
+
+.cd-mode-toggle {
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.cd-mode-toggle > div{
+  display:block;
+  opacity: 0.8;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  -ms-transition: opacity 200ms ease-in-out;
+  transition: opacity  200ms ease-in-out;
+}
+
+.cd-mode-toggle > div:hover {
+  opacity: 1;
+}
+
+.cd-mode-toggle button {
+  width: 28px;
+  outline: none;
+}
+
+.cd-mode-toggle button.selected {
+  background-color: #5cb85c;
+}
+
+/*
+ * Top level container, capture all clicks
+ */
+
+.cd-container {
+  width:      100%;
+  height:     100vmax;
+  top:        0;
+  left:       0;
+  position:   absolute;
+}
+
+/*
+ * Shapes
+ */
+
+.cd-marker {
+  color: rgb(99, 131, 255);
+  font-size: 1.5em;
+  position: absolute;
+  top: -26px;
+  left: -7px;
+}
+
+.cd-marker.deemphasize {
+  color: rgba(134, 134, 134, 0.19);
+}
+
+.cd-square {
+  border: solid 2px rgb(99, 131, 255);
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.cd-circle {
+  border: solid 2px rgb(99, 131, 255);
+  position: relative;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+}
+
+.cd-circle.deemphasize,
+.cd-square.deemphasize {
+  border-color: rgba(134, 134, 134, 0.19);
+}
+
+.cd-highlight {
+  background-color: rgba(0, 255, 3, 0.33);
+  position: relative;
+  height: 1.3em;
+  top: 0px;
+  left: 0px;
+}
+
+.cd-highlight.deemphasize {
+  background-color: rgba(134, 134, 134, 0.19);
+}
+
+
+/*
+ * Annotation bubble
+ */
+
+.cd-annotation {
+  position: absolute;
+}
+
+.cd-annotation-input,
+.cd-annotation-content {
+  border-radius: 3px;
+  box-shadow: 2px 3px 4px 2px grey;
+  top: -12px;
+  background-color: #FFF;
+  position: relative;
+  height: 120px;
+  width: 260px;
+  padding: 0px;
+}
+
+.cd-annotation-editor,
+.cd-annotation-viewer {
+  z-index: 1000;
+  position: absolute;
+  top: -14px;
+  right: 0px;
+}
+
+/* Per shape adjustments */
+.cd-annotation.highlight .cd-annotation-editor,
+.cd-annotation.highlight .cd-annotation-viewer {
+  top: -14px;
+  right: 15px;
+}
+
+.cd-annotation.circle .cd-annotation-editor,
+.cd-annotation.circle .cd-annotation-viewer {
+  right: 9px;
+}
+
+.cd-annotation.square .cd-annotation-editor,
+.cd-annotation.square .cd-annotation-viewer {
+  right: 10px;
+}
+
+
+.cd-annotation-content-text {
+  padding: 10px 8px 0px 0px;
+  height: 95px;
+  position: relative;
+  font-size: 1.1em;
+  font-style: italic;
+  z-index: 4;
+  background-color: #FFF;
+}
+
+.cd-annotation-input textarea {
+  height: 85px;
+  width: 100%;
+  position: relative;
+  border: 0px;
+  border-radius: 3px;
+  padding: 10px 8px 0px 0px;
+  font-size: 1em;
+  line-height: 1.3;
+  resize: none;
+  z-index: 4;
+}
+
+.cd-annotation-content-info,
+.cd-annotation-input-controls {
+  border-top: solid 1px rgba(0  , 0, 0, 0.13);
+  background-color: #F2F2F2;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 0.8em;
+  z-index: 4;
+}
+
+.cd-annotation-content-info {
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+}
+
+.cd-annotation-content-controls,
+.cd-annotation-input-controls {
+  text-align: right;
+  height: 35px;
+}
+
+.cd-annotation-content-controls {
+  position: absolute;
+  z-index: 5;
+  right: 0px;
+  font-size: .8em;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  -moz-transition: opacity 300ms ease-in-out;
+  -o-transition: opacity 300ms ease-in-out;
+  -ms-transition: opacity 300ms ease-in-out;
+  transition: opacity  300ms ease-in-out;
+}
+
+.cd-mode-toggle button,
+.cd-annotation-content-controls button,
+.cd-annotation-input-controls button {
+  text-align: center;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  color: #FFF;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.cd-annotation-input-controls button {
+  padding: 4px;
+}
+
+.cd-annotation-input-controls button.save {
+  background-color: #5cb85c;
+}
+
+.cd-annotation-content-controls button.delete,
+.cd-annotation-input-controls button.cancel {
+  background-color: #d9534f;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Adds smart quotes */
+.cd-annotation-content-text::before {
+  content: "\201C";
+}
+
+.cd-annotation-content-text::after {
+  content: "\201D";
+}
+
+
+
+/* Start shadow bubble */
+/* This is all to get a comment bubble with a matching shadow */
+.cd-shadow-bubble {
+  background-color: rgb(242, 242, 242);
+  content: "\00a0";
+  display: block;
+  left: 120px;
+  position: absolute;
+  bottom: 2px;
+  transform: rotate( 45deg );
+  width:  20px;
+  height:  20px;
+  z-index: 3;
+  box-shadow: 1px 1px 4px 2px grey;
+}
+
+.cd-shadow-bubble.invert {
+  top: -22px;
+  background-color: #FFF;
+  box-shadow: 1px 1px 2px 1px grey;
+}
+
+/* End shadow bubble */
+
+

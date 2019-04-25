@@ -1,0 +1,117 @@
+@import '../../../styles/colors.scss';
+
+.category {
+  display: block;
+  border-bottom: 1px solid #ccc;
+
+  .title {
+    padding: 12px 10px 12px 0;
+  }
+
+}
+
+.def-category {
+  border-bottom: none;
+  padding: 10px;
+
+  .title {
+    display: none;
+  }
+}
+
+.title {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  color: #000;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 19px;
+    right: 0;
+  }
+}
+
+.list {
+  margin-left: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.page {
+  padding: 8px 0px 8px 0px;
+  transition: color .2s;
+  font-size: 13px;
+
+  :global(.eye-icon) {
+    fill: #9E9C9C;
+    height: 16px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  a {
+    display: block;
+    color: #364150;
+    transition: color .2s;
+
+    &:hover {
+      color: rgba($base-green, .7);
+    }
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+      color: $base-green;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &.active {
+      color: $base-green;
+    }
+  }
+
+  &:first-child {
+    padding-top: 4px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+
+}
+
+.collapsed {
+  padding: 0 12px;
+
+  .title:after {
+    content: '\F104';
+  }
+
+  .list {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.expanded {
+  padding: 0 12px 10px;
+
+  .title {
+    padding-bottom: 12px;
+
+    &:after {
+      content: '\F107';
+    }
+  }
+}

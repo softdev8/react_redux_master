@@ -1,0 +1,71 @@
+ @import '../../../styles/colors.scss';
+
+.widgetStatsContainer {
+  color: #494949;
+  font-size: 17px;
+}
+
+.introText {
+  font-size: 16.5px;
+  font-weight: 300;
+  padding: 0 0 5px 5px;
+  color: $green-dark;
+}
+
+.statTable {
+  max-width: 300px;
+  text-align: left;
+  border: 1px solid $light-grey-for-icon;
+  border-radius: 5px;
+}
+
+.statWidgetIcon {
+  color: $base-green;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.statWidgetIconLessons {
+  color: gray;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.statWidgetIconCodeExec {
+  color: #0080ff;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.subtext {
+  font-size: 0.7em;
+  font-style: oblique;
+  text-align: left;
+  color: gray;
+}
+
+.statWidgetIconCodeSnippet {
+  color: #814da9;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.statWidgetIconVisual {
+  color: #a9814d;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.statWidgetCount {
+
+}

@@ -1,0 +1,33 @@
+@import '../../styles/colors.scss';
+
+.articles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    padding: 40px 0 35px;
+    border-bottom: 1px double rgba($green-dark, .5);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.b-articles-list_landing {
+
+  .b-articles-list__item {
+    margin-bottom: 63px;
+    border-bottom: 1px solid rgba($green-dark, .2);
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+}

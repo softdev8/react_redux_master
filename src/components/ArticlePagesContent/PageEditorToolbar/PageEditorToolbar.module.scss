@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.toolbar {
+  margin-top: -36px;
+  background-color: $green-light;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alignment {
+  background-color: #fff;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.common-info {
+  display: inline-block;
+  float: right;
+  line-height: 30px;
+  
+  span {
+    font-size: 10px;
+    color: rgba($green-dark, .5);
+    margin-left: 15px;
+  }
+}
+
+.settings {
+  position: relative;
+
+  :global(.cog-icon) {
+    width: 18px;
+    height: 18px;
+    fill: $base-green;
+    cursor: pointer;
+  }
+}

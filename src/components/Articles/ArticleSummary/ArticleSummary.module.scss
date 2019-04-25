@@ -1,0 +1,162 @@
+@import '../../../styles/colors.scss';
+
+.article-summary {
+  position: relative;
+}
+
+.main {
+  padding: 25px 15px 15px;
+}
+
+.author {
+  margin-bottom: 15px;
+}
+
+.title {
+
+  font-size: 31px;
+  margin: 0 5px 15px;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: .5px;
+
+  a {
+    color: #000;
+    vertical-align: middle;
+  }
+}
+
+.desc {
+  color: #000;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-left: 15px;
+
+  :global(.peoples-icon),
+  :global(.clocks-icon) {
+    fill : #fff;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    stroke: $green-dark;
+  }
+
+  .meta {
+    color: rgba(0, 0, 0, .4);
+    flex-shrink: 0;
+
+    > span {
+      margin-right: 15px;
+      font-size: 12px;
+    }
+  }
+
+  .views {
+    margin-top: -1px;
+  }
+
+  .continue {
+    color: $light-grey-for-text;
+
+  }
+
+  svg {
+    height: 19px;
+  }
+}
+
+.price {
+  margin-right: 10px;
+  cursor: default;
+}
+
+.price-accent {
+  border: 1px solid $base-orange;
+  padding: 3px 12px;
+  border-radius: 4px;
+  color: $base-orange;
+  margin-right: 25px;
+}
+
+.original-price {
+  color: $light-grey-for-text;
+  text-decoration: line-through;
+}
+
+.buttons-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+
+  :global(.b-btn) {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+  }
+
+  :global(.b-btn_primary svg) {
+    stroke : $base-orange;
+    stroke-width: .5;
+    height: 12px;
+  }
+
+  :global(.b-btn_secondary svg) {
+    fill: $base-green;
+    height: 15px;
+  }
+
+  :global(.bar-chart-icon) {
+    fill: $light-grey-for-text;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.badge {
+  background-color: white;
+  color: $dark-gray-for-text;
+  border: 1px double $gray-border;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 3px 5px;
+  vertical-align: middle;
+  margin-left: 10px;
+  display: inline-block;
+  line-height: 20px;
+  margin-left: 5px;
+}
+
+@import '_ArticleSummaryBanner.module.scss';
+@import '_ArticleSummaryCollection.module.scss';
+
+@media (min-width: 768px) {
+
+  .main {
+    padding: 30px 32px 10px 32px;
+  }
+
+  .footer {
+    padding-left: 30px;
+    padding-right: 0;
+    line-height: 25px;
+    justify-content: space-between;
+  }
+}
+
+.recommendation-container {
+  width: 100%;
+  font-weight: 300;
+}

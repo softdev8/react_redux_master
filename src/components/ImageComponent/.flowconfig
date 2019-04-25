@@ -1,0 +1,9 @@
+[ignore]
+/Users/sergeylapin/react-work/template/rubix-app/src/jsx/app/images-edit/node_modules/node-sass/node_modules/npmconf/test/fixtures/package.json
+/Users/sergeylapin/react-work/template/rubix-app/src/jsx/app/images-edit/node_modules/webpack-dev-server/node_modules/webpack-dev-middleware/node_modules/enhanced-resolve/test/fixtures/node_modules/invalidPackageJson/package.json
+/Users/sergeylapin/react-work/template/rubix-app/src/jsx/app/images-edit/node_modules/webpack/node_modules/enhanced-resolve/test/fixtures/node_modules/invalidPackageJson/package.json
+[include]
+
+[libs]
+
+[options]

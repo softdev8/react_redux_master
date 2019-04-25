@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+
+.text-editor {
+
+  :global(.canvas-wrapper) {
+    padding-top: 0;
+  }
+
+  :global(textarea.form-control) {
+    padding: 5px;
+    color: #000;
+  }
+}
+
+.column {
+}

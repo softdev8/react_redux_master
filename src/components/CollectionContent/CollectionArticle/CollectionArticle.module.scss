@@ -1,0 +1,95 @@
+@import '../../../styles/colors.scss';
+
+@mixin centerIcon($flex) {
+  display: $flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $green-light;
+}
+
+.drag {
+  background-color: $green-dark;
+  opacity: .5;
+  width: 35px;
+  height: 35px;
+  vertical-align: top;
+  flex-shrink: 0;
+
+  @include centerIcon(inline-flex);
+
+  &:hover {
+    opacity: 1;
+    cursor: move;
+  }
+
+  :global(svg) {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: $zeus;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.controls {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.icon-wrapper {
+  @include centerIcon(inline-flex);
+  width: 35px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  :global(svg) {
+    width: 20px;
+    height: 20px;
+    fill: $base-green;
+  }
+}
+
+.edit,
+.clone,
+.delete {
+  background-color: $green-light;
+}
+
+.preview {
+  color: $green-dark;
+  font-size: 30px;
+  border-right: none;
+  border-left: none;
+
+  &.enabled {
+    background-color: $green-light;
+    color: $base-green;
+  }
+
+  &.disabled {
+    background-color: $green-light;
+    color: #aaa;
+
+    :global(svg) {
+      fill: #aaa;
+    }
+
+  }
+}

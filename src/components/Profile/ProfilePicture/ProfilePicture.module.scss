@@ -1,0 +1,75 @@
+@import '../../../styles/colors.scss';
+
+.profile-picture {
+  position: relative;
+  
+  :global(.b-image-uploader) {
+    width: 250px;
+    color: $green-dark;
+
+    svg {
+      display: none;
+      fill: $base-green;
+      stroke: $base-green;
+    }
+  }
+
+  :global(.b-btn-remove) {
+    display: block;
+    font-size: 12px;
+    margin: 10px auto 0;
+  }
+
+  &.write {
+    margin-bottom: 20px;
+  }
+
+  &.read {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -45px;
+  }
+}
+
+.empty {
+  
+  &.write {
+    padding-top: 20px;
+
+    :global(.b-image-uploader) {
+      text-align: center;
+      color: $base-green;
+
+      svg {
+        display: inline;
+      }
+    }
+  }
+
+  &.read {
+    display: none;
+  }
+}
+
+.image {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  background-position: 50%;
+  background-size: cover; 
+  margin: -45px auto 0;
+}
+
+@media (min-width: 660px) {
+
+  .profile-picture.read {
+    margin-bottom: -75px;
+  }
+
+  .image {
+    height: 150px;
+    width: 150px;
+    margin-top: -75px;
+  }
+}

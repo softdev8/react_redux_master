@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.b-modal-footer {
+  width: 100%;
+  background-color: $green-light;
+  min-height: 35px;
+  padding: 0 25px;
+}
+
+.b-modal-footer-helper {
+  line-height: 35px;
+  color: $zeus;
+  font-weight: 300;
+
+  &:first-child {
+    float: left;
+  }
+
+  &:last-child {
+    float: right;
+  }
+
+  &__text {}
+
+  &__link {
+    font-weight: 700;
+    color: $zeus;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .b-modal-footer-helper {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}

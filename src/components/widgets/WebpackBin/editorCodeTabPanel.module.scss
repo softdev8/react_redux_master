@@ -1,0 +1,22 @@
+@import '../../../styles/colors.scss';
+
+.codePanel {
+  border-left: 1px solid $runjs-separator-color;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+  overflow-y: scroll;
+
+  :global(.cmcomp-editor-container) {
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+
+    :global(> .CodeMirror) {
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+}

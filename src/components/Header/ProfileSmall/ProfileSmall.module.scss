@@ -1,0 +1,71 @@
+@import '../../../styles/colors.scss';
+
+.profile {
+  display: inline-block;
+  position: relative;
+  padding: 10px 10px 7px;
+  text-align: right;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &:hover svg {
+    fill: rgba($base-green, .5);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: -9999px;
+  top: 100%;
+  z-index: 5555;
+  min-width: 165px;
+  max-width: 196px;
+  border: 1px solid $green-light;
+  box-shadow: 0px 2px 2px $green-light;
+  border-top: none;
+}
+
+.list {
+  background-color: #fff;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .link {
+    padding: 5px 0;
+    color: rgba(0, 0, 0, .6);
+    transition: color .2s;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .link {
+    font-size: 13px;
+    text-transform: capitalize;
+    padding-left: 15px;
+  }
+}

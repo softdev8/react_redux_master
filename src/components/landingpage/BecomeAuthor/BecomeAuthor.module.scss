@@ -1,0 +1,71 @@
+@import '../../../styles/colors.scss';
+
+.block {
+  color: #333;
+  width: 100%;
+  background-color: rgba($light-grey, .7);
+  padding: 45px;
+
+  .inn {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .center {
+    flex-basis: 50%;
+    }
+
+    .left {
+      flex-basis: 100%;
+    }
+
+    .right {
+      flex-basis: 100% !important;
+      text-align: center !important;
+    }
+  }
+
+  .button {
+    background-color: $base-orange;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 15px 35px;
+    transition: all .2s;
+  }
+
+  .header {
+    margin-top: 0;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .textSmall {
+    margin-top: 5px;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .left {
+      margin-bottom: 15px !important;
+    }
+
+    .left, .right {
+      flex-basis: 100% !important;
+      text-align: center !important;
+    }
+
+    .button {
+      margin: 0 auto !important;
+    }
+  }
+}

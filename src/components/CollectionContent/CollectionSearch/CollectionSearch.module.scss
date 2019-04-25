@@ -1,0 +1,31 @@
+@import '../../../styles/colors.scss';
+
+.search {
+  padding: 15px 0;
+  background-color: #fff;
+  margin-bottom: 15px;
+  
+  display: flex;
+
+  :global(.b-select) {
+    padding-left: 12px;
+    width: 20%;
+    min-width: 110px;
+    vertical-align: middle;
+  }
+
+  :global(.b-search-component) {
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    :global(.form-control) {
+      background-color: $green-light;
+    }
+
+    :global(.b-btn) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

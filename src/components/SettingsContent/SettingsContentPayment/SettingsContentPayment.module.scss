@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.payment {
+  display: block;
+  text-align: center;
+}
+
+.info {
+  margin-bottom: 15px;
+}
+
+.card {
+  color: $zeus;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+@media (min-width: 992px) {
+  .payment {
+    text-align: left;
+    padding-left: 15px;
+  }
+}

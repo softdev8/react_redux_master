@@ -1,0 +1,78 @@
+@import '../../../styles/colors.scss';
+
+.action {
+  background-color: $base-orange;
+  padding: 10px 0;
+
+  h4 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 38px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    padding-top: 40px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    padding-top: 0px;
+    color: #fff;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+  }
+
+  .buttons {}
+
+  .button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 50px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    text-align: center;
+    transition: all .2s;
+    
+    &:hover {
+      background-color: #fff;
+      color: #f90;
+    }
+  }
+}
+
+.inn {
+  display: flex;
+  flex-direction: column;
+  min-height: 178px;
+}
+
+.col_right,
+.col_left {
+  width: 100%;
+}
+
+.col_right {
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .inn {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col_left {
+    width: 75%;
+  }
+
+  .col_right {
+    width: 25%;
+    align-items: center;
+  }
+}

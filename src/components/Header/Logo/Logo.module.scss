@@ -1,0 +1,39 @@
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  overflow: hidden;
+  top: 50%;
+  margin-top: -30px;
+  
+  img {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+.title {
+  position: absolute;
+  font-size: 1px;
+  visibility: hidden;
+  margin: 0;
+}
+
+.fake {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 156px;
+  height: 35px;
+
+  &.small {
+    width: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: auto;
+  }
+}

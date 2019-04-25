@@ -1,0 +1,43 @@
+@import '../../../styles/colors.scss';
+
+.b-select {
+  width: 100%;
+  display: inline-block;
+  background-color: $green-light;
+  padding: 12px 0 8px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '▾';
+    top: 0;
+    right: 0;
+    width: 20px;
+    bottom: 0;
+    background-color: $green-light;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $green-dark;
+    pointer-events: none;
+  }
+
+  select {
+    background-color: $green-light;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $green-dark;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

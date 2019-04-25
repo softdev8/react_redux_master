@@ -1,0 +1,45 @@
+@import '../../../styles/colors.scss';
+
+.title_area {
+    border-bottom: 3px solid $gray-border2;
+    text-align: center;
+    height: 50px;
+    padding: 10px;
+}
+.title {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-top: 5px;
+}
+.button {
+    text-transform: none;
+    margin-top: -3px;
+    position: absolute;
+    right: 25px;
+    font-size: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: $green-dark;
+}
+.error {
+    text-align: center;
+    color: $execErrorText;
+    padding: 10px;
+    border-bottom: 1px solid $gray-border;
+}
+.diagramPreviewArea> svg:not(:first-child){
+    display:none;
+}
+.diagram_type_area {
+    text-align: center;
+    margin: 10px 0px;
+}
+.diagram_dropdown_label {
+    margin-right: 5px;
+}
+.diagram_drondown_button {
+    text-transform: none;
+    width: 95px;
+}

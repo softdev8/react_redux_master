@@ -1,0 +1,26 @@
+.b-multicolor-line {
+  position: relative;
+
+  &__right {
+    right: -9999px;
+  }
+
+  &__left {
+    left: -9999px;
+  }
+
+  &__right,
+  &__left {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    height: 100%;
+    width: 9999px;
+  }
+
+  &__content {
+    background-color: transparent;
+    overflow: hidden;
+  }
+}
+

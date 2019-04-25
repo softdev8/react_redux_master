@@ -1,0 +1,110 @@
+@import '../../../styles/colors.scss';
+
+@mixin titlePlaceholder() {
+  font-size: 100%;
+}
+
+@mixin tagsPlaceholder() {
+  font-size: 14px;
+}
+
+@mixin title() {
+  font-size: 36px;
+  font-family: Cinzel, Ariel, Georgia, serif;
+  margin-top: 0.30em;
+  margin-bottom: 0.30em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.summary {
+  margin-bottom: 20px;
+
+  .edit {
+    :global(.form-control[type='text']) {
+      height: auto;
+      padding: 0;
+
+      &::-webkit-input-placeholder {
+        @include titlePlaceholder();
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+        @include titlePlaceholder();
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+        @include titlePlaceholder();
+      }
+
+      &:-ms-input-placeholder {
+        @include titlePlaceholder();
+      }
+    }
+
+    :global(textarea.form-control) {
+      font-size: 18px;
+      font-family: Cinzel, Ariel, Georgia, serif;
+      color: rgba($dark-gray-for-text, 1);
+      padding: 15px 0;
+      color: #000;
+      resize: vertical;
+    }
+
+    .title,
+    .title :global(.form-control[type='text']) {
+      @include title();
+    }
+
+    .title {
+      padding: 0 5px;
+      border-bottom: 1px solid rgba($green-dark, .3);
+      margin-bottom: 0;
+    }
+
+    .description,
+    .tags {
+      padding: 0 5px;
+      margin-bottom: 0;
+    }
+
+    .tags {
+
+      :global(.form-control) {
+        padding: 5px 5px 5px 0;
+        color: #000;
+        font-weight: 300;
+        @include tagsPlaceholder();
+
+        &::-webkit-input-placeholder {
+          @include tagsPlaceholder();
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+          @include tagsPlaceholder();
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+          @include tagsPlaceholder();
+        }
+
+        &:-ms-input-placeholder {
+          @include tagsPlaceholder();
+        }
+      }
+    }
+  }
+}
+
+:global(.summary-share-icon) {
+  :global(.b-some-with-icon) {
+    height: 13px;
+    svg {
+      width: 12px !important;
+      height: 13px !important;
+      fill: #89949B !important;
+    }
+  }
+}

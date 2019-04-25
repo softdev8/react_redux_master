@@ -1,0 +1,81 @@
+@import '../../../styles/colors.scss';
+
+.footer-menu {
+  min-height: 57px;
+  
+  &:global(.navbar-default) {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  :global(.navbar-nav) {
+    > li > .link {
+      text-transform: uppercase;
+      font-size: 13px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    .footer-menu-support {
+
+      a {
+        padding: 0;
+      }
+
+      :global(.b-btn) {
+        padding: 9px 15px 7px;
+        text-transform: uppercase;
+      }
+    }
+
+    .footer-menu-link {
+      a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+  }
+
+  :global(.navbar-right) {
+    padding: 9px 15px;
+  }
+
+}
+
+.dashboard,
+.landing {
+  background-color: $green-light;
+
+  :global(.navbar-nav) {
+    > li > a {
+      color: $green-dark;
+    }
+  }
+
+    .support {
+    background-color: $green-dark;
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  :global(.navbar-nav) {
+    margin-left: -15px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  :global(.navbar-right) {
+    margin-top: 0;
+    padding-left: 0;
+    position: static;
+  }
+
+  :global(.navbar-nav) {
+    margin-left: -15px;
+  }
+}

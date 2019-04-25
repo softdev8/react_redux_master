@@ -1,0 +1,350 @@
+import styles from './InputWithLabel.module.scss';
+
+import React, {Component, PropTypes} from 'react';
+import {findDOMNode} from 'react-dom';
+import { FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
+import {TextEditor} from '../../index';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+
+export default class InputWithLabel extends Component {
+
+  static PropTypes = {
+    type    : PropTypes.string,
+
+    // string or DOMNode
+    label   : PropTypes.node,
+
+    help    : PropTypes.string,
+    name   : PropTypes.string,
+    value   : PropTypes.string,
+    min_price : PropTypes.number,
+    max_price : PropTypes.number,
+    is_priced : PropTypes.bool,
+    simple  : PropTypes.bool,
+    simple_validate : PropTypes.bool,
+    isError : PropTypes.bool,
+    mode    : PropTypes.string,
+    placeholder : PropTypes.string,
+    addonBefore : PropTypes.string,
+    externalEditor : PropTypes.string,
+    groupClassName : PropTypes.string,
+    styleValidate : PropTypes.number,
+    handleFocus: PropTypes.func,
+    handleBlur: PropTypes.func,
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.handleExternalTextChange = this.handleExternalTextChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleFocus  = this.handleFocus.bind(this);
+    this.handleBlur   = this.handleBlur.bind(this);
+    this.doPriceChecks = this.doPriceChecks.bind(this);
+
+    this.state = {
+      value   : props.value == null ? '' : props.value,
+      isFocus : false,
+      hidden  : null,
+    }
+  }
+
+  componentDidMount() {
+    const hidden = findDOMNode(this.hiddenRef);
+
+    this.setState({hidden});
+  }
+
+  componentWillReceiveProps(nextProps, nextState) {
+    if(nextProps.value !== this.state.value) {
+      this.setState({
+        value : nextProps.value,
+      });
+    }
+  }
+
+  handleChange(e) {
+
+    if (e.target.name.indexOf('price') > -1) {
+      let price = this.doPriceChecks(e.target.value, false);
+      this.setState({ value: price });
+    }
+    else {
+      this.setState({
+        value: findDOMNode(this.inputRef).value,
+      });
+    }
+  }
+
+  handleFocus() {
+    this.setState({
+      isFocus: true,
+    });
+  }
+
+  doPriceChecks(price_s, enforceValueCorrection){
+      if ((price_s == null) || (price_s == "")) {
+        this.setState({ value: "" });
+        return;
+      }
+
+      const price = parseInt(price_s.replace(/[^0-9]/g, ''));
+      if (isNaN(price))
+        return;
+
+      if(enforceValueCorrection){
+        if (price == 1)
+          return 2;
+        else if (price > this.props.max_price)
+          return this.props.max_price;
+        else if (price < this.props.min_price)
+          return this.props.min_price;
+      }
+
+      return price;
+  }
+
+  handleBlur(e) {
+    if(this.props.mode && this.props.mode !== 'write') return;
+
+    let data = {
+      target : {},
+    }
+
+    data.target.name = e.target.name;
+    data.target.value = e.target.value;
+
+    //any field that has price in its name
+    if (e.target.name.indexOf('price') > -1) {
+      data.target.value = this.doPriceChecks(e.target.value, true);
+    }
+
+    this.setState({
+      isFocus: false,
+    }, () => {
+      if(this.props.onBlur) this.props.onBlur(data);
+    });
+  }
+
+  handleExternalTextChange(newText) {
+    this.state.value = newText;
+    // contentEditable hasn't focus/blur events, so we will save value
+    // in parent component on change
+    this.state.hidden.value = newText;
+  }
+
+  getValue() {
+    if(this.state.value == null){
+      return '';
+    }
+
+    return this.state.value;
+  }
+
+  render() {
+
+    const {type = 'text', label, name, help, externalEditor, externalEditorChildren, simple, simple_validate, mode, isError = false} = this.props;
+    const addonBeforeNode = this.props.addonBefore || null;
+    const value = this.state.value == null ? '' : this.state.value;
+
+    const labelNode    = typeof label == 'string' ? this.renderLabel(label, help) : label;
+    let labelClassName = type === 'textarea' ? styles['label-top'] : '';
+
+    const baseClassName = this.props.groupClassName ? `${this.props.groupClassName} b-input-with-label` : 'b-input-with-label';
+
+    let groupClassName = this.state.isFocus ? `${baseClassName} ${styles.focused}` : baseClassName;
+
+    if(isError) groupClassName += ` ${styles.error}`;
+
+    const props = {
+      name     : this.props.hasOwnProperty('name') && this.props.name.replace(' ', '_'),
+      onBlur   : this.handleBlur,
+      disabled : mode == 'read',
+    }
+
+    if(simple) {
+      if (name && name.indexOf('price') > -1) {
+        const disabled = (!this.props.is_priced);
+        const input = <input type='text' name={name} id = 'price'
+                        className='dp-numberinput dp-numberinput-article form-control'
+                        ref={(node) => this.inputRef = node}
+                        placeholder={this.props.placeholder}
+                        onChange={this.handleChange}
+                        onFocus={this.handleFocus}
+                        onBlur={this.handleBlur}
+                        disabled={disabled}
+                        value={value}/>;
+
+        var inputTooltip = input;
+        if (!disabled) {
+          const tooltip = <Tooltip className={styles['price-tooltip']}>Price must be 0, 2 up to 999</Tooltip>;
+          inputTooltip = <OverlayTrigger trigger='hover' placement='bottom' overlay={tooltip}>{input}</OverlayTrigger>;
+        }
+
+        return  <div className='form-group b-input-with-label_simple dp-priceinput dp-priceinput-article'>
+                  <label className='control-label label-article'><span>price</span></label>
+                  {inputTooltip}
+                </div>;
+      }
+      else {
+
+        return  <FormControl  type={type}
+                      labelClassName={labelClassName}
+                      groupClassName='b-input-with-label_simple'
+                      label={label}
+                      ref={(node) => this.inputRef = node}
+                      placeholder={this.props.placeholder}
+                      onChange={this.handleChange}
+                      {...props}
+                      value={value}/>;
+      }
+    }
+
+    if(simple_validate) {
+      return  <FormControl  type = {type}
+                      labelClassName={labelClassName}
+                      groupClassName='b-input-with-label_simple'
+                      id={name}
+                      name={name}
+                      label={label}
+                      style={this.props.styleValidate}
+                      placeholder={this.props.placeholder}
+                      onFocus={this.props.handleFocus}
+                      onBlur={this.props.handleBlur}/>;
+    }
+
+    if (name && name.indexOf('price') > -1) {
+      const baseClassName = 'b-input-with-label dp-priceinput';
+      const className = this.state.isFocus ? `${baseClassName} ${styles.focused}` : baseClassName;
+      const disabled = ((mode == 'read') || !this.props.is_priced);
+      const input = <input type='text' name={name}
+                        groupClassName='b-input-with-label_simple'
+                        className='dp-numberinput form-control'
+                        ref={(node) => this.inputRef = node}
+                        placeholder={this.props.placeholder}
+                        onChange={this.handleChange}
+                        onFocus={this.handleFocus}
+                        onBlur={this.handleBlur}
+                        disabled={disabled}
+                        value={value}/>;
+      var inputTooltip = input;
+      if (!disabled) {
+        const tooltip = <Tooltip className={styles['price-tooltip']}>Price must be 0, 2 up to 999</Tooltip>;
+        inputTooltip = <OverlayTrigger trigger='hover' placement='bottom' overlay={tooltip}>{input}</OverlayTrigger>;
+      }
+
+      return  <div className={className}>
+                {labelNode}
+                {inputTooltip}
+              </div>;
+    }
+
+    if (externalEditor) {
+      const options = ['bold', 'italic', 'underline', 'h2', 'h3', 'strikethrough', 'fontsize', 'colorPicker', 'highlight', 'quote', 'anchor', 'pre', 'outdent', 'indent', 'removeFormat'];
+
+      return  <FormControl addonBefore={addonBeforeNode}
+                      labelClassName={labelClassName}
+                      groupClassName={groupClassName}
+                      wrapperClassName={styles['external-editor-wrap']}
+                      label={labelNode}
+                      ref={(node) => this.inputRef = node}>
+
+                <TextEditor mode='edit' text={value}
+                            onTextChange={this.handleExternalTextChange}
+                            options={options}
+                            placeholder={this.props.placeholder} />
+
+                <input name={this.props.name} type='hidden' ref={(node) => this.hiddenRef = node} value={value}/>
+              </FormControl>;
+
+    } else if (externalEditorChildren) {
+
+      return  <FormGroup bsClass="form-group-lg b-input-with-label">
+                <ControlLabel>{labelNode}</ControlLabel>
+
+                {
+                  this.props.children ?
+                    this.props.children :
+                    <FormControl  addonBefore={addonBeforeNode}
+                                  labelClassName={labelClassName}
+                                  groupClassName={groupClassName}
+                                  wrapperClassName={styles['external-editor-wrap']}
+                                  label={labelNode}
+                                  ref={(node) => this.inputRef = node} >
+                    </FormControl>
+                }
+                <input name={this.props.name} type="hidden" ref={(node) => this.hiddenRef = node} value={value}/>
+              </FormGroup>;
+
+   } else {
+
+      return  (
+        <FormGroup bsClass="form-group form-group-lg b-input-with-label">
+          <ControlLabel bsClass={`${labelClassName} control-label`}>{labelNode}</ControlLabel>
+          <FormControl  type={type}
+                        addonBefore={addonBeforeNode}
+                        groupClassName={groupClassName}
+                        bsSize='large'
+                        ref={(node) => this.inputRef = node}
+                        placeholder={this.props.placeholder}
+                        onChange={this.handleChange}
+                        onFocus={this.handleFocus}
+                        onBlur={this.handleFocus}
+                        {...props}
+                        value={value}/>
+        </FormGroup>
+      )
+
+    }
+
+    if(this.props.children) {
+      return  <FormControl  addonBefore={addonBeforeNode}
+                      groupClassName={groupClassName}
+                      labelClassName={labelClassName}
+                      label={labelNode}
+                      bsSize='large'
+                      ref={(node) => this.inputRef = node}
+                      placeholder={this.props.placeholder}
+                      onFocus={this.handleFocus}
+                      onBlur={this.handleFocus}>
+                {this.props.children}
+              </FormControl>
+    }
+
+  }
+
+  renderLabel(labelText, helpText) {
+
+    return  <span className={styles['label-inn']}>
+              <span className={styles['label-text']}>{ labelText }</span>
+              <span className={styles['label-help']}>{ helpText }</span>
+            </span>;
+  }
+}
+
+const fields = [{
+  name : 'username',
+  type : 'text',
+  warning : 'User_name: field must be between 6 and 20 characters long.',
+}, {
+  name : 'password',
+  type : 'password',
+  warning : 'Password: field must be between 6 and 50 characters long.',
+}, {
+  name : 'email',
+  type : 'email',
+  warning : 'Email: invalid email address.',
+}, {
+  name : 'full name',
+  type : 'text',
+  warning : 'Full_name: field must be between 2 and 50 characters long.',
+}];
+
+const price_options = [
+  { value: '2', label: '2' },
+  { value: '5', label: '5' },
+  { value: '10', label: '10' },
+  { value: '20', label: '20' },
+  { value: '50', label: '50' },
+  { value: '100', label: '100' },
+];

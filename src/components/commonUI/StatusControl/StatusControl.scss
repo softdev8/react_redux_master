@@ -1,0 +1,24 @@
+@import '../../../styles/colors.scss';
+
+.b-status-control {
+  position: relative;
+
+  .times-icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    fill: $zeus;
+    cursor: pointer;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .alert p:last-child {
+    margin-bottom: 0;
+  }
+}

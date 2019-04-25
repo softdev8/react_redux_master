@@ -1,0 +1,13 @@
+:global(.b-responsive-image) {
+  position: relative;
+  padding-top: 50%;
+
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,20 @@
+@import '../../../styles/colors.scss';
+
+.addFileButton {
+  float: left;
+  font-size: 14px;
+  color: $light-gray-icon-text;
+  background-color: #f5f5f5;
+  border: 1px solid rgba($grey-for-icon, 0.3);
+  cursor: pointer;
+  margin-left: 5px;
+
+  &:hover {
+    background-color: rgba($grey-for-icon, 0.3);
+  }
+}
+
+.inputFilename {
+  max-width: 130px;
+  margin-left: 2px;
+}

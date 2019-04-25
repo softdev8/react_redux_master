@@ -1,0 +1,22 @@
+.tree {
+  width: 300px;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #21252B;
+}
+.m-node.placeholder {
+  border: 1px dashed #1385e5;
+}
+.m-node .inner {
+  color: #9DA5B4;
+  font-size: 14px;
+  font-family: Menlo;
+}
+.m-node .node {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 5px;
+}
+.m-node .node.is-active {
+  background-color: #31363F;
+}

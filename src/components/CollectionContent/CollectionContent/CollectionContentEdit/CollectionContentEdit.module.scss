@@ -1,0 +1,43 @@
+@import '../../../../styles/colors.scss';
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+
+  &:global(.b-page__content) {
+    padding-top: 0;
+  }
+
+  :global(.b-status-control) {
+    position: absolute;
+    width: 100%;
+    bottom: 101%;
+    text-align: center;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  :global(.alert) {
+    border: none;
+  }
+
+  :global(.alert-danger) {
+    background-color: rgba($danger-bg, .8);
+  }
+
+  :global(.alert-success) {
+    background-color: rgba($success-bg, .8);
+  }
+}

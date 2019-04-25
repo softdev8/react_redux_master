@@ -1,0 +1,19 @@
+.login {
+  display: block;
+
+  :global(.b-modal__column) {
+
+    > a:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+  
+  :global(.b-modal__separator i) {
+    top: 40%;
+  }
+
+  :global(.b-input-with-label_simple) {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,128 @@
+@import '../../styles/colors.scss';
+
+.run {
+  margin-top: 3px;
+  :global(.play-icon) {
+    fill: #FFFFFF;
+    width: 18px;
+    height: 18px;
+  }
+
+
+  :global(.close-icon) {
+    stroke: black;
+    width: 12px;
+    height: 12px;
+  }
+
+  :global(.b-btn) {
+  }
+}
+
+.run_button {
+  width: 100px;
+  padding: 0;
+}
+
+.stdin_button {
+  width: 140px;
+  padding: 0;
+  margin-left: 5px;
+
+  &:hover,
+  &:active,
+  &:global(.active),
+  &:global(.active:focus) {
+    /*background-color: $green-light;*/
+  }
+
+  &:focus {
+    outline: none;
+    /*background-color: $green-light;*/
+  }
+}
+
+.judge_select_form {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+
+  > select {
+    display: inline;
+    font-size: 14px;
+    border: 1px solid;
+    height: 24px
+  }
+}
+
+.input_output{
+  margin-top: 5px;
+  max-height: 250px;
+  width: 100%;
+  display: block;
+  overflow: scroll;
+  border-bottom: 2px solid $base-quiz-color;
+}
+
+.initial_height{
+  max-height: 110px;
+  transition: max-height 0.5s
+}
+
+.limit_height{
+  max-height: 300px;
+  transition: max-height 0.5s
+}
+
+.executon_result{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 5px;
+  color: #000000;
+}
+
+.stdin{
+  width: 100%;
+  border: 1px solid $light-grey;
+}
+
+.reason_success{
+  color: $codeJudgeSuccess;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.reason_error{
+  color: $execErrorText;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.stdlabels{
+  border-bottom: 1px solid black;
+}
+
+.temp_text {
+  text-align: center;
+  cursor: pointer;
+  cursor: hand;
+  color: $light-grey-for-text;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popover {
+  :global(.popover-content) {
+    overflow-y: scroll;
+    max-height: 150px;
+    word-wrap: break-word;
+  }
+}
+
+/*:global(.popover.top) {
+  margin-top: 335px;
+}
+*/

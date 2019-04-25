@@ -1,0 +1,17 @@
+{
+  "name": "cosmos-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "A development tool for designing truly encapsulated React components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skidding/cosmos.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node devServer.js",
+    "playground": "node devServer.js --env playground"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

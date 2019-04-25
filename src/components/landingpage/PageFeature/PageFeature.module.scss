@@ -1,0 +1,21 @@
+.feature {
+  position: relative;
+  // make feature less by header height
+  min-height: calc(60vh);
+}
+
+.image-wrapper {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  img {
+    visibility: hidden;
+  }
+}

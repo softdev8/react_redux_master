@@ -1,0 +1,24 @@
+@import '../../../styles/colors.scss';
+
+.wrapper {
+  border: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.execInProgress {
+  margin-top: 10px;
+}
+
+.execError {
+  margin: 10px;
+  color: $execErrorText;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  font-family: monospace;
+}
+
+.clickRunMsg {
+  color: $light-grey-for-text;
+  padding: 10px;
+}

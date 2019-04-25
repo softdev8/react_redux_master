@@ -1,0 +1,57 @@
+@import '../../../styles/colors.scss';
+
+.widget {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 55px;
+  border: 1px solid #F0EDED;
+  width: 100%;
+
+  :global(.header-icon),
+  :global(.code-icon),
+  :global(.question-icon),
+  :global(.paint-brush-icon),
+  :global(.table-icon),
+  :global(.screen-icon),
+  :global(.font-icon) {
+    width: 22px;
+    height: 22px;
+    fill: $base-green;
+  }
+  :global(.list-icon) {
+    width: 22px;
+    height: 22px;
+    fill: $base-green;
+    transform: rotate(90deg);
+  }
+
+  :global(.b-some-with-icon-icon) {
+    font-size: 22px;
+    color: $base-green;
+  }
+
+  .text,
+  :global(.b-some-with-icon-text) {
+    font-size: 12px;
+    color: $green-dark;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .text {
+    line-height: 120%;
+    white-space: nowrap;
+  }
+}
+
+.icon {
+  min-height: 22px;
+  max-width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 5px;
+}

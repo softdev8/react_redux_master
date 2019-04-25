@@ -1,0 +1,76 @@
+@import '../../../styles/colors.scss';
+
+.checkout {
+  display: block;
+
+  :global(.b-modal-header) {
+    background-color: $green-dark;
+  }
+
+  :global(.b-modal-header__title) {
+    color: #fff;
+  }
+
+  :global(.b-status-control) {
+    top: 0;
+  }
+}
+
+.body {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.column {
+  min-width: 400px;
+  width: 60%;
+}
+
+.braintree {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.card {
+
+  .buttons {
+    text-align: center;
+
+    .getButton {
+      height: 40px;
+      width: 100px;
+      font-weight: 300;
+      -webkit-appearance: button;
+      cursor: pointer;
+    }
+  }
+
+  :global(.b-btn[type='submit']) {
+    display: inline-block;
+    max-width: 100px;
+  }
+}
+
+.modal-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .2s;
+}
+
+.placeholder-active {
+  z-index: 0;
+  opacity: 1;
+}

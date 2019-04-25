@@ -1,0 +1,24 @@
+.loadersWrapper {
+  display: inline-block;
+}
+
+.dropdownButton {
+  margin: 10px;
+  :global(.btn) {
+    text-transform: none;
+    border-color: #eee;
+    height: 55px;
+    padding: 3px;
+  }
+}
+
+.loaderOption {
+  margin: 1em;
+  border-bottom: 1px solid #eee;
+  width: 170px;
+}
+
+.loaderOptionCheckbox {
+  float: right;
+  margin: 1em !important;
+}

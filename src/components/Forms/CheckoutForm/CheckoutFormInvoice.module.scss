@@ -1,0 +1,45 @@
+@import '../../../styles/colors.scss';
+
+.invoice {
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding-right: 15px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+}
+
+.price,
+.title {
+  display: inline-block;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px 0 0;
+  border-top: 1px solid rgba($green-dark, .3);
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

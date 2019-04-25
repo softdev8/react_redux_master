@@ -1,0 +1,8 @@
+.tab-content {
+  display: none;
+  padding-top: 10px;
+  
+  &:global(.active) {
+    display: block;
+  }
+}

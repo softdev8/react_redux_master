@@ -1,0 +1,30 @@
+// _InputWithLabelSimple.scss
+
+@import '../../../styles/colors.scss';
+
+:global(.b-input-with-label_simple) {
+  display: flex;
+  width: 100%;
+  height: 40px;
+
+  :global(.form-control) {
+    background-color: rgba($green-light, .5);
+    display: inline-block;
+    height: 100%;
+  }
+
+  label {
+    line-height: 40px;
+    background-color: $green-light;
+    display: inline-block;
+    padding: 0 10px;
+    height: 100%;
+    font-size: 14px;
+    color: $zeus;
+    min-width: 86px;
+    margin: 0;
+    font-weight: 300;
+    text-transform: capitalize;
+    flex-shrink: 0;
+  }
+}

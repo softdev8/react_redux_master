@@ -1,0 +1,31 @@
+@import '../../../styles/colors.scss';
+
+.container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-top: 1px solid $light-green-border;
+  border-bottom: 1px solid $base-green;
+  padding-bottom: 15px;
+
+  :global(.cmcomp-editor-container) {
+    border: none;
+    border-radius: 0;
+  }
+
+  :global(.cmcomp-single-editor-container) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.tabslist {
+  display: table-cell;
+  width: 285px;
+  border-right: 1px solid $light-green-border;
+}
+
+.buttonsWrapper {
+  flex: 1;
+  margin: 10px 10px 10px 0;
+}

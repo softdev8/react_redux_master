@@ -1,0 +1,25 @@
+// _ArticleSummaryBannerNoImage.module.scss
+
+.article-summary.no-image {
+
+  .banner {
+    height: 0;
+    padding-bottom: 0;
+  }
+
+  .main {
+    padding-top: 0;
+  }
+}
+
+.article-summary.collection.no-image {
+  
+  .banner {
+    // height: 38px;
+  }
+
+  .main {
+    padding-top: 0;
+  }
+
+}

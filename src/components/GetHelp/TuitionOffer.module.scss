@@ -1,0 +1,90 @@
+@import '../../styles/colors.scss';
+
+.helpServices-list {
+  list-style: none;
+  padding: 0px;
+
+  &-item {
+    box-shadow: inset 0 0 0.25em $green-dark;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 40px 0px 40px 0px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.getHelpDetails {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+@media all and (max-width: 640px) {
+  .getHelpDetails {
+      flex-direction: column;
+  }
+}
+
+.description {
+  flex: 17;
+  font-size: 19px;
+  font-family: Cinzel, Ariel, Georgia, serif;
+  overflow-wrap: break-word;
+  white-space: pre-line;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.duration_price {
+  flex: 5;
+  padding: 10px;
+  padding-top: 0px;
+  text-align: left;
+}
+
+.getHelpDuration {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.duration {
+  width: 120px;
+  color: $green-dark;
+  font-weight: bold;
+  font-size: 19px;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+:global(.gethelp-duration-icon) {
+  :global(.b-some-with-icon) {
+    height: 21px;
+    padding-right: 10px;
+    svg {
+      width: 20px !important;
+      height: 21px !important;
+      fill: #89949B !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    padding-right: 20px;
+  }
+
+  .price {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .duration {
+    margin: 0px 0 20px 0;
+  }
+}
+

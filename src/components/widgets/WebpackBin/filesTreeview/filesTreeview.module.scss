@@ -1,0 +1,65 @@
+@import '../../../../styles/colors.scss';
+
+.treeWrapperDark {
+  background-color: #21252B;
+
+  :global(.m-tree) {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+}
+
+.treeviewDark {  
+  :global(.m-node.placeholder) {
+    border: 1px dashed #1385e5;
+  }
+
+  :global(.m-node .inner) {
+    color: #9DA5B4;
+  }
+
+  :global(.m-node .node) {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  :global(.m-node .node.is-active) {
+    background-color: #31363F;
+  }
+}
+
+.treeWrapperLight {
+  background-color: white;
+
+  :global(.m-tree) {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+}
+
+.treeviewLight {  
+  :global(.m-node.placeholder) {
+    border: 1px dashed #1385e5;
+  }
+
+  :global(.m-node .inner) {
+    color: #6d737d;
+  }
+
+  :global(.m-node .node) {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  :global(.m-node .node.is-active) {
+    background-color: white;
+    color: $green-dark-text;
+    border-left: 5px solid $base-green;
+  }
+}

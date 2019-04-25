@@ -1,0 +1,15 @@
+@import '../../../styles/colors.scss';
+
+.b-sticky-panel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  &.fixed {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+  }
+}

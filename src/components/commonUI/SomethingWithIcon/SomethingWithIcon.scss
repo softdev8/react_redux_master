@@ -1,0 +1,81 @@
+@import '../../../styles/colors.scss';
+
+.b-some-with-icon {
+  display: inline-block;
+  
+  svg {
+    display: inline-block;
+    fill: #fff;
+  }
+
+  &-text {
+    vertical-align: middle;
+    margin: 0 2px;
+  }
+
+  &-icon {
+    display: inline-flex;
+    position: relative;
+    margin: 0 2px;
+    vertical-align: middle;
+  }
+
+  &-notificcation {
+    position: absolute;
+    content: '';
+    background-color: $base-orange;
+    width: 14px;
+    height: 14px;
+    right: -5px;
+    top: -5px;
+    border-radius: 50%;
+    border: 2px solid #000;
+  }
+
+  &.flex {
+    display: flex;
+  }
+
+  &.icon-top,
+  &.icon-right,
+  &.icon-bottom {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.icon-top {
+    flex-direction: column;
+
+    .b-some-with-icon-icon {
+      order: 0;
+    }
+
+    .b-some-with-icon-text {
+      order: 1;
+    }
+  }
+
+  &.icon-bottom {    
+    flex-direction: column;
+
+    .b-some-with-icon-icon {
+      order: 1;
+    }
+
+    .b-some-with-icon-text {
+      order: 0;
+    }
+  }
+
+  &.icon-right {
+    flex-direction: row;
+
+    .b-some-with-icon-icon {
+      order: 1;
+    }
+
+    .b-some-with-icon-text {
+      order: 0;
+    }
+  }
+}

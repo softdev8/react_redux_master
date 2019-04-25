@@ -1,0 +1,33 @@
+@import '../../../styles/colors.scss';
+
+.email {
+  display: block;
+  text-align: center;
+
+  label {
+    color: $zeus;
+  }
+
+  :global(.form-group),
+  :global(.checkbox) {
+    margin: 0;
+  }
+
+  :global(.checkbox) {
+    margin-left: -3px;
+  }
+
+  :global(.checkbox span) {
+    vertical-align: middle;
+  }
+
+  :global(.checkbox input[type='checkbox']) {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .email {
+    text-align: left;
+  }
+}

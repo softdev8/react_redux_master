@@ -1,0 +1,43 @@
+// _FormControls.scss
+
+@import '../../../styles/colors.scss';
+
+@mixin placeholderStyles() {
+  color: rgba(0, 0, 0, .5);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.form-control {
+  font-size: 18px;
+  font-weight: 300;
+  color: $green-dark;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  
+  &::-webkit-input-placeholder {
+    @include placeholderStyles();
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @include placeholderStyles();
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @include placeholderStyles();
+  }
+
+  &:-ms-input-placeholder {  
+    @include placeholderStyles();
+  }
+}
+
+.input-group-addon {
+  border: none;
+  border-radius: 0;
+}
+
+.control-label {
+  cursor: pointer;
+}

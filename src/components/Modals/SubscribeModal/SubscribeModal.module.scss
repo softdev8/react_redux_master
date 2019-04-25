@@ -1,0 +1,21 @@
+@import '../../../styles/colors.scss';
+
+.subscribe {
+  display: block;
+
+  .subscribe_email{
+    max-width: 450px;
+    border: 1px solid $green-light;
+    margin: 10px auto;
+
+    input{
+      text-align: center;
+    }
+  }
+}
+
+.dontShownButton {
+	text-transform: none;
+	color: $light-grey-for-text;
+}
+

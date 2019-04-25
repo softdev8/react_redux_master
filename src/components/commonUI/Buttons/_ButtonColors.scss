@@ -1,0 +1,155 @@
+// _ButtonColors.scss
+
+.b-btn_primary,
+.b-btn_orange {
+  background-color: $base-orange;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $base-orange;
+  }
+
+  &.b-btn_inverse {
+    color: $base-orange;
+    background-color: transparent;
+  }
+}
+
+.b-btn_secondary,
+.b-btn_green {
+  background-color: $base-green;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $base-green;
+  }
+
+  &.b-btn_inverse {
+    color: $base-green;
+    background-color: transparent;
+  }
+}
+
+.b-btn_action {
+  background-color: $grey-for-icon;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $light-grey-for-icon;
+  }
+
+  &.b-btn_inverse {
+    color: $grey-for-icon;
+    background-color: transparent;
+  }
+}
+
+.b-btn_action_secondary {
+  background-color: transparent;
+  color: $grey-for-icon;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $light-grey-for-icon;
+  }
+
+  &.b-btn_inverse {
+    color: $light-grey-for-icon;
+  }
+}
+
+.b-btn_default {
+  background-color: transparent;
+  color: $base-green;
+
+  &:hover,
+  &:active {
+    color: $base-green;
+  }
+}
+
+.b-btn_dark {
+  background-color: $green-dark;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $green-dark;
+  }
+}
+
+.b-btn_white {
+  background-color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+  }
+}
+
+.b-btn_orange-border {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid $base-orange;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    border: 1px solid $base-orange;
+    color: #fff;
+  }
+}
+
+.b-btn_white-border {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #fff;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
+
+.b-btn_green-border {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid $green-dark;
+  background-color: transparent;
+  color: $green-dark;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $green-dark;
+    color: $green-dark;
+  }
+}
+
+.b-btn_link {
+  color: #337ab7;
+  text-decoration: underline;
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

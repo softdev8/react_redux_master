@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+
+.downloadText {
+  text-decoration: underline;
+  color: #337ab7;  
+}
+
+.file {
+  text-align: left;
+
+  :global(.attachment-icon) {
+    fill: $base-green;
+    height: 20px;
+    width: 20px;
+  }
+}

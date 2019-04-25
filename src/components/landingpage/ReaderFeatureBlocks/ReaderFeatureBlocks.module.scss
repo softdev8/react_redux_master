@@ -1,0 +1,210 @@
+@import '../../../styles/colors.scss';
+
+.blocks {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.block {
+  display: inline-flex;
+  padding: 45px;
+  text-align: center;
+
+  &_big {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-height: 768px) {
+  .blocks {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .block {
+    padding: 20px 0;
+
+    &_big, &_small {
+      flex-basis: 100%;
+
+      .inn {
+        width: 100%;
+        padding: 0 25px;
+      }
+    }
+  }
+}
+
+.inn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.orange {
+  background-color: rgba($base-orange, .9);
+
+  .button {
+    background-color: rgba($base-orange, 0);
+  }
+
+  .button:hover {
+    background-color: rgba($base-orange, 1);
+  }
+}
+
+.green {
+  /*background-color: rgba(0, 0, 0, .4);*/
+
+  .button {
+    background-color: rgba($base-green, 0);
+  }
+
+  .button:hover {
+    background-color: rgba($green-dark, 1);
+    border-radius: 5px;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text1 {
+  font-weight: 600;
+  font-size: 44px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.buttons {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .text1 {
+    font-size: 30px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+}
+
+.landingViewCourse {
+  position: relative;
+  background: $landing-action-button1;
+  background-image: -webkit-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -moz-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -ms-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -o-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: linear-gradient(to bottom, $landing-action-button1, $landing-action-button2);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 8px 20px;
+  text-decoration: none;
+  margin: 14px;
+
+  &:hover {
+    background: $landing-action-button2;
+    background-image: -webkit-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -moz-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -ms-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -o-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: linear-gradient(to bottom, $landing-action-button2, $landing-action-button3);
+    text-decoration: none;
+  }
+}
+
+.landingRegisterFree {
+  position: relative;
+  background: $landing-action-button1;
+  background-image: -webkit-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -moz-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -ms-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: -o-linear-gradient(top, $landing-action-button1, $landing-action-button2);
+  background-image: linear-gradient(to bottom, $landing-action-button1, $landing-action-button2);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 8px 20px;
+  text-decoration: none;
+  margin: 14px;
+
+  &:hover {
+    background: $landing-action-button2;
+    background-image: -webkit-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -moz-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -ms-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: -o-linear-gradient(top, $landing-action-button2, $landing-action-button3);
+    background-image: linear-gradient(to bottom, $landing-action-button2, $landing-action-button3);
+    text-decoration: none;
+  }
+
+  @media (max-width: 510px) {
+    display: none;
+  }
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 18px;
+  margin-right: 8px;
+  transition: all .2s;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+:global(.typed-cursor){
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

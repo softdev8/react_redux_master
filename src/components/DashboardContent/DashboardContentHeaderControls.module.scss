@@ -1,0 +1,109 @@
+@import '../../styles/colors.scss';
+
+.controls {
+  width: 100%;
+  position: relative;
+
+  :global(.b-btn) {
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 400;
+    width: 50%;
+    padding: 0;
+
+    svg {
+      width: auto;
+      height: 20px;
+    }
+  }
+
+  :global(.b-search-component),
+  :global(.container) {
+    padding: 0;
+  }
+
+  :global(.b-search-component .form-group) {
+    display: flex;
+  }
+
+  :global(.b-search-component .form-group .form-control) {
+    height: 34px;
+    background-color: #fff;
+    border-bottom: 1px solid $green-light;
+    border-left: 1px solid $green-light;
+    margin-bottom: 0;
+  }
+
+  :global(.b-search-component .form-group .b-btn) {
+    width: 36px;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid $green-light;
+    border-right: 1px solid $green-light;
+
+    svg {
+      height: 18px;
+      fill: $base-green;
+    }
+  }
+
+  :global(.b-multicolor-line__content) {
+    background-color: rbga($green-light, .75);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons,
+  .search {
+    margin: 0 auto;
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .buttons {
+    background-color: transparent;
+  }
+
+  .search {
+    order: 1;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .controls {
+
+    :global(.container) {
+      padding: 0 15px;
+    }
+
+    :global(.b-multicolor-line__content) {
+      display: block;
+    }
+
+    :global(.b-btn) {
+      font-size: 14px;
+    }
+
+    .buttons,
+    .search {
+      width: 50%;
+      margin: inherit;
+      float: left;
+    }
+  }
+
+}
+
+@media (min-width: 1100px) {
+
+  .controls {
+
+    :global(.container) {
+      width: 1075px;
+    }
+  }
+}

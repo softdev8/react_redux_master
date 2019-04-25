@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 1px;
+  margin-left: 0;
+  transition: margin-left .25s ease-out;
+  overflow: hidden;
+  position: relative;
+
+  :global(.b-sticky-panel) {
+    top: 60px;
+  }
+
+  :global(.b-page) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 1px;
+  }
+
+  :global(.b-page__content) {
+    flex: 1 0 auto;
+  }
+
+  :global(.b-page),
+  :global(.b-page__content) {
+    padding-bottom: 0;
+  }
+
+  :global(.b-footer) {
+    position: static;
+  }
+}
+
+.collapsed {
+  margin-left: 300px;
+}

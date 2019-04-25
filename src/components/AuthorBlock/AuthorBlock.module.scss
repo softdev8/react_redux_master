@@ -1,0 +1,51 @@
+@import '../../styles/colors.scss';
+
+.author-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userpic,
+.info {
+  display: inline-block;
+}
+
+.info {
+  vertical-align: top;
+  margin-left: 15px;
+
+  :global(.tag-icon) {
+    width: 14px;
+    height: 14px;
+    fill: #89949B;
+    transform: rotate(90deg);
+  }
+}
+
+.name {
+  font-size: 14px;
+  color: $green-dark;
+}
+
+.tags {
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+  list-style: none;
+
+  font-size: 12px;
+  text-transform: capitalize;
+  margin-left: 7px;
+  display: inline-block;
+  vertical-align: middle;
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.time {
+  font-size: 12px;
+}

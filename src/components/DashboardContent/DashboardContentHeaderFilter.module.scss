@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+
+.filter {
+  padding: 0px 0 20px;
+  border-bottom: 1px solid rgba($green-dark, .2);
+  
+  :global(.control-label) {
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+    float: left;
+    line-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-transform: uppercase;
+    color: $green-dark;
+    font-size: 12px;
+    padding-top: 12px;
+  }
+
+  :global(.form-group) {
+    margin: 0;
+  }
+}
+
+.wrapper {
+  float: left;
+  width: 180px;
+
+  :global(select.form-control) {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: $green-dark;
+    background-color: $green-light;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .filter {
+
+    :global(.form-horizontal) {
+      margin-left: 5px;
+    }
+  }
+}

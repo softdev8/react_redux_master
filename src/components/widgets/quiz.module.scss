@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+
+.quizInputForm {
+  white-space: pre-wrap;
+}
+
+.questionTextNumber {
+  margin: 20px 0px 10px 0px;
+	font-weight: 400;
+	font-size: 18px;
+  color: gray;
+}
+
+.resultsSummaryContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.resultsSummary {
+  width: 400px;
+  border-radius: 5px;
+  padding: 10px;
+
+
+  :global(.table) {
+    margin-bottom: 0;
+  }
+}

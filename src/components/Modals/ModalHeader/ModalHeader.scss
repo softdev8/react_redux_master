@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+
+.b-modal-header {
+  width: 100%;
+  padding: 38px 0 30px;
+  background-color: $green-light;
+  text-align: center;
+  position: relative;
+
+  &__title {
+    font-size: 18px;
+    color: $zeus;
+    font-weight: 300;
+    margin: 0;
+  }
+}

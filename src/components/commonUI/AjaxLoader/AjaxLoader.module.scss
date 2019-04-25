@@ -1,0 +1,73 @@
+@import '../../../styles/colors.scss';
+
+.ajax-loader {
+  padding: 15px;  
+}
+
+.loading-exp {
+  padding-left: 6; 
+  color: $base-orange;
+}
+
+.loading {
+  display: inline;
+  font-size: 24px;
+  line-height: 24px;
+  color: $base-orange;
+
+  @-webkit-keyframes opacity {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+  }
+
+  @-moz-keyframes opacity {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  span {
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  
+  -moz-animation-name: opacity;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  }
+
+  span:nth-child(2) {
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
+  }
+
+  span:nth-child(3) {
+  -webkit-animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  }
+}
+
+.spinner{
+  display:inline-block;
+  margin-top: 3px;
+  margin-right: 3px;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: $base-orange;
+  border-left-color: $base-orange;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+
+  @-webkit-keyframes nprogress-spinner {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes nprogress-spinner {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

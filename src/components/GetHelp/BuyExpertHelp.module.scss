@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.discounted_price_s {
+  color: red;
+  text-decoration: line-through;
+  padding: 0 15px 0 10px;
+  text-align: center;
+}
+
+.discounted_price {
+  color: $gray-light-discounted-text;
+  font-size: 18px;
+}
+
+.price-accent {
+  text-align: center;
+  border: 1px solid $base-orange;
+  padding: 3px 12px;
+  width: 150px;
+  display: inline-block;
+  border-radius: 4px;
+  color: white;
+  background-color: $base-orange;
+  font-size: 18px;
+  white-space: nowrap;
+}

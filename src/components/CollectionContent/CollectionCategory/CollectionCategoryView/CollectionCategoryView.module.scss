@@ -1,0 +1,55 @@
+@import '../../../../styles/colors.scss';
+
+.category {
+  display: block;
+
+  &:first-child {
+    .title {
+      padding-top: 0;
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px solid rgba($green-dark, .5);
+  padding: 15px 0;
+}
+
+.articles {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    font-size:15px;
+  }
+}
+
+.article {
+  border-bottom: 1px solid $light-grey;
+  margin-left: 30px;
+  padding: 10px 10px 10px 0px;
+  display: block;
+
+  &:hover {
+    color: $green-dark;
+  }
+
+  &.disabled:hover {
+    color: inherit;
+  }
+}
+
+.badge {
+  background-color: $base-green;
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 3px 5px;
+  vertical-align: middle;
+  margin-left: 10px;
+}

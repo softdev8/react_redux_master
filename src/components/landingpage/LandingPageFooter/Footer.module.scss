@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  //position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 102;
+  backface-visibility: hidden;
+
+  &:global(.with-sidebar) {
+    text-align: right;
+  }
+}
+
+.dashboard {
+  min-height: 57px;
+}
+
+@media (min-width: 768px) {
+  .footer { 
+    &:global(.with-sidebar) {
+      text-align: left;
+    }
+  }
+}

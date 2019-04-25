@@ -1,0 +1,43 @@
+@import '../../styles/colors.scss';
+
+.hintWrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $light-gray-border;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 10px 15px 10px;
+}
+
+.hintNumber {
+  margin: 0px 0 10px 10px;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.hintEditor {
+  margin: 0 5px;
+  border-top: 1px solid $light-gray-border;
+}
+
+.hintViewer {
+  background-color: #f9f9f9;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.hintRemove {
+  font-size: 15px;
+  margin-left: 20px;
+  padding: 3px 6px;
+  cursor: pointer;
+  border: 1px solid $delete-color;
+  color: $delete-color;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    color: $delete-hover-color;
+    border-color: $delete-hover-color;
+  }
+}

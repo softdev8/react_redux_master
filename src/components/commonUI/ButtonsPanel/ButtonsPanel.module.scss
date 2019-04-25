@@ -1,0 +1,35 @@
+@import '../../../styles/colors.scss';
+
+.buttons-panel {
+  display: block;
+  min-height: 34px;
+  text-align: right;
+  background-color: rgba($green-light , .75);
+  
+  :global(.b-btn) {
+    height: 34px;
+    min-width: 134px;
+    line-height: inherit;
+
+    :global(.play-icon) {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+    :global(.download-icon) {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+    :global(.upload-icon) {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+    :global(.pencil-icon) {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+  }
+}

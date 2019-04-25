@@ -1,0 +1,22 @@
+@import '../../../styles/colors.scss';
+
+.simple {
+  display: block;
+
+  :global(.b-modal-header) {
+    background-color: $green-dark;
+  }
+
+  :global(.b-modal-header__title) {
+    color: #fff;
+  }
+
+  :global(.b-modal-footer) {
+    background-color: #fff;
+  }
+}
+
+.text {
+  padding: 10px;
+  font-size: 12px;
+}

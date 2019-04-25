@@ -1,0 +1,60 @@
+@import '../../../styles/colors.scss';
+
+.collection-form {
+  margin-bottom: 15px;
+
+  :global(.b-input-with-label) {
+    border-bottom: 1px solid #c7e1e0;
+
+    :global(.control-label) {
+      min-width: 125px;
+      width: auto;
+    }
+
+    &[class*='focused'] {
+      
+      :global(.b-select:after) {
+        background-color: #c1e5e4;
+      }
+    }
+  }
+
+  :global(.form-control) {
+    color: $zeus;
+  }
+
+  :global(textarea.form-control) {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  :global(.b-select) {
+    width: 70px;
+    background-color: transparent;
+
+    select {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+    }
+  }
+
+  :global(.row .col-xs-6) {
+
+    &:first-child {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+
+  .paid {
+    :global(.form-control),
+    :global(.form-control:disabled) {
+      background-color: $green-light;
+      color: #000;
+    }
+  }
+}

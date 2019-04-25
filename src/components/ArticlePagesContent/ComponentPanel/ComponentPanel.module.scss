@@ -1,0 +1,77 @@
+@import '../../../styles/colors.scss';
+
+.component {
+  position: relative;
+  padding: 5px;
+  margin: 10px 0;
+
+  &.active {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    border: 3px solid $light-grey-for-icon;
+    box-shadow: inset 0 0 1px rgba($base-green, .3);
+    border-radius: 5px;
+  }
+
+  :global(.medium-editor-placeholder:after) {
+    font-size: 14px;
+    color: #999;
+    font-weight: 300;
+  }
+
+  :global(.textEditor) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  :global(.textViewer) {
+    min-height: 27px;
+    display: inline-block;
+  }
+
+  &:hover .widget-name,
+  &:hover .controls,
+  &:hover .add-widget-wrapper {
+    opacity: 1;
+  }
+}
+
+.add-widget-wrapper {
+  position: absolute;
+  margin-left: -6px;
+  width: 100%;
+  top: -5px;
+  z-index: 1;
+}
+
+.widget-name {
+  position: absolute;
+  right: 5px;
+  bottom: -10px;
+  font-size: 11px;
+  color: #999;
+}
+
+.controls,
+.widget-name,
+.add-widget-wrapper {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.content {
+  overflow: auto;
+}
+
+@media (min-width: 1050px) {
+  .controls {
+    opacity: 1;
+  }
+
+  .add-widget-wrapper {
+    position: relative;
+    margin-left: -51px;
+    top: auto;
+    width: auto;
+  }
+}

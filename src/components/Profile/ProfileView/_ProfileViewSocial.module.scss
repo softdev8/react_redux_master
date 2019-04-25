@@ -1,0 +1,18 @@
+// _ProfileViewSocial.module.scss
+
+@import '../../../styles/colors.scss';
+
+.social {
+  text-align: center;
+  margin-bottom: 15px;
+
+  a {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  svg {
+    fill: #fff;
+    height: 24px;
+  } 
+}

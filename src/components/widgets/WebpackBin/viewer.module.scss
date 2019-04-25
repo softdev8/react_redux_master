@@ -1,0 +1,7 @@
+@import '../../../styles/colors.scss';
+
+.viewerWrapper {
+  border: 2px solid $runjs-border-color;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+}

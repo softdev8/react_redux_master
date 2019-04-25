@@ -1,0 +1,188 @@
+@mixin textareaStyles() {
+  min-height: 138px;
+  padding-top: 22px !important; // remove important after removeing ol styles
+  padding-bottom: 22px !important; // remove important after removeing ol styles  
+}
+
+@import '../../../styles/colors.scss';
+@import 'FormControls.scss';
+
+:global(.form-horizontal) {
+
+  :global(.b-input-with-label) {
+    display: flex;
+    min-height: 85px;
+    margin: 0;
+
+    :global(.control-label) {
+      padding: 0 5px 0 18px;
+      background-color: $green-light;
+      min-width: 125px;
+      width: 20%;
+      cursor: pointer;
+      margin: 0;
+      font-weight: 400;
+      line-height: normal;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+
+      &.label-top {
+        padding-top: 25px;
+        display: inline-block;
+      }
+    }
+
+    :global(.form-control) {
+      // width: 80%;
+      min-width: 1px;
+      height: auto !important; // remove important after removeing ol styles
+      border-radius: 0;
+      border: none;
+      padding-left: 25px;
+      padding-right: 25px;
+      font-weight: 300;
+    }
+
+    :global(.form-control:disabled) {
+      background-color: #fff;
+      cursor: default;
+    }
+
+    :global(textarea.form-control) {
+      @include textareaStyles();
+      resize: vertical;
+    }
+
+    :global(.input-group) {
+      position: static;
+      display: inline-flex;
+      width: 80%;
+    }
+
+    :global(.input-group-addon) {  
+      display: inline-flex;
+      padding-left: 3.35%;
+      width: 20%;
+      min-width: 140px;
+      height: auto !important; // remove important after removeing ol styles
+      background-color: rgba($green-light, .5);
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $green-dark;
+      align-items: center;
+    }
+
+    &.focused {
+  
+      :global(.control-label) {
+        background-color: #c1e5e4;
+      }  
+
+      :global(.b-select) {
+        background-color: #c1e5e4;
+      }
+      :global(.b-select:after) {
+        background-color: #c1e5e4;
+      }
+    }
+    &.error {
+      border: 1px solid rgba($base-orange, .7);
+    }
+  }
+  :global {
+  
+  .dp-priceinput {
+    display: flex;
+    height: 50px;
+  
+
+    .b-select {
+      padding-top: 18px;
+      padding-left: 6px;
+      background-color: #EBF8F8;
+      select {
+        -webkit-appearance:none;
+      }
+    }
+    .dp-numberinput { 
+      width: 100%;
+      min-width: 1px;
+      height: 50px; 
+      padding: 2px 10px;
+      border-width: 1px;
+      background-color: #fff;
+    }
+  }
+  }
+
+}
+
+.label-inn {
+  text-align: left;
+}
+
+.label-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $green-dark;
+  display: block;
+}
+
+.label-help {
+  font-size: 10px;
+  color: rgba($green-dark, .5);
+  display: block;
+  margin-top: 2px;
+  white-space: pre;
+}
+
+.external-editor-wrap {
+  @include textareaStyles();
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 80%;
+  background-color: #fff;
+
+  :global(.textEditor){
+    margin: 0;
+    min-height: 138px;
+    color: $green-dark;
+    font-weight: 300;
+    font-size: 18px;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  :global(.medium-editor-placeholder:after) {
+    @include placeholderStyles();
+  }
+}
+
+.price-tooltip {
+  z-index: 9999;
+
+  :global(.tooltip-arrow) {
+    position: absolute;  
+    margin-left: 0px !important;
+    border-bottom-color: #C7E1E0 !important;
+    opacity: 1;
+  }
+  :global(.tooltip-inner) {
+    padding: 3px 8px;
+ 
+    font-size: 12px;
+    color: #4DA981;
+    background-color: #EBF8E8;
+    opacity: 1;
+    border: 1px solid #C7E1E0;
+ }
+}
+
+@import '_InputWithLabelSimple.scss';

@@ -1,0 +1,110 @@
+@import '../../../styles/colors.scss';
+
+.matrix_area {
+    margin: 5px;
+    display: block;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+
+.menu {
+  display: block;
+  padding: 5px;
+  background-color: #f5f4f4;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+
+  :global(.b-some-with-icon-icon) {
+    vertical-align: baseline;
+  }
+
+  :global(.b-btn) {
+    padding: 4px 6px;
+
+    &:focus {
+      outline: none;
+
+      :global(.align-icon),
+      :global(.fa) {
+        opacity: 1;
+      }
+    }
+  }
+
+  :global(.fa) {
+    font-size: 20px;
+  }
+
+  :global(.form-control) {
+    margin-left: 5px;
+    width: 60px;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  :global(.align-icon) {
+    width: 18px;
+    height: 18px;
+  }
+
+  :global(.align-icon),
+  :global(.fa) {
+    color: #a9a9a9;
+    transition: opacity .2s;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.label {
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0 8px 0 0;
+}
+
+.row {
+  overflow: hidden;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.row-title {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 70px;
+}
+
+.right-buttons {
+  float: right;
+}
+
+.colorpicker {
+
+  :global(.fa) {
+    font-size: 18px;
+    color: #333;
+
+    &:before {
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+  }
+}

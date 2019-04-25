@@ -1,0 +1,21 @@
+.label {
+  font-weight: 400;
+  display: inline-flex;
+  cursor: pointer;
+  margin: 3px 15px 3px 3px;
+
+  :global(.checkbox) {
+    margin-top:0px;
+    margin-bottom:15px;
+  }
+}
+
+.downloadLabel{
+  :global(span){
+    margin-right: 10px;
+  }
+}
+
+.jotted_position_override {
+  position: relative;
+}

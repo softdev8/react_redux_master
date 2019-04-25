@@ -1,0 +1,19 @@
+@import '../../../styles/colors.scss';
+
+.tabslist {
+  display: table-cell;
+  width: 250px;
+}
+
+.codeTab {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-bottom: 1px solid $base-green;
+  padding-bottom: 10px;
+}

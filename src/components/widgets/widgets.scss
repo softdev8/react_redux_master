@@ -1,0 +1,80 @@
+@import '../../styles/colors.scss';
+
+.edcomp-toolbar {
+
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+.CodeMirror pre {
+  z-index: 1;
+}
+
+.disable-cursor {
+  .CodeMirror-cursor {
+    display: none !important;
+  }
+}
+
+.runnable-enter {
+  opacity: 0.01 !important;
+}
+
+.runnable-enter.runnable-enter-active {
+  opacity: 1 !important;
+  transition: opacity .5s ease-in;
+}
+
+.runnable-leave {
+  opacity: 1 !important;
+}
+
+.runnable-leave.runnable-leave-active {
+  opacity: 0.01 !important;
+  transition: opacity .5s ease-in;
+}
+
+.code-container {
+  position: relative;
+
+  .code-buttons {
+    padding: .2rem;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.01;
+    top: 1rem;
+    right: 4rem;
+    transition: opacity .3s;
+
+    .fa {
+      font-size: 2rem;
+    }
+
+    &>* {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: .7rem !important;
+      &:hover {
+        color: $copyDownloadBtnHover !important;
+        * {
+          color: $copyDownloadBtnHover !important;
+        }
+      }
+    }
+    &>*:first-child {
+      margin-left: 0 !important;
+    }
+
+    * {
+      color: $copyDownloadBtn !important;
+    }
+  }
+
+  &:hover {
+    .code-buttons {
+      opacity: 1;
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.b-search-component_clean {
+  padding: 0;
+
+  .form-control {
+    padding: 0 12px 0 0;
+  }
+
+  .search-icon {
+    width: 16px;
+    height: 16px;
+    fill: $gray-search-icon;
+    transition: color .2s;
+  }
+}
+
+.b-search-component_focused {
+
+  .search-icon {
+    fill: $gray-search-icon;
+  }
+}

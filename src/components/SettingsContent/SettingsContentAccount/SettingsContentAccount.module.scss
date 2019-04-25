@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.account {
+  display: block;
+
+  :global(.form-group:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.icon-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    height: 12px;
+    fill: $base-green
+  }
+}
+
+.value {
+  color: $zeus;
+}
+
+.delete {
+  margin-top: 30px;
+  text-align: right;
+}

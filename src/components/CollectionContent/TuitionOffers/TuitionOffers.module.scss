@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.tuition_offers_container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 15px 0 15px;
+  padding: 10px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #777;
+}
+
+.tuition_offer_add_button {
+  margin: 10px 0 0 10px;
+}
+
+.tuition_offer_label {
+  color: #777;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.tuition_offer_input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add_tuition_offer_container {
+  border: 1px solid $light-green-border;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
