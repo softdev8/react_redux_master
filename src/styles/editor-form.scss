@@ -1,0 +1,61 @@
+// _editor-form.scss
+
+@import 'colors.scss';
+
+.editor-form {
+  margin-bottom: 15px;
+
+  .b-input-with-label {
+    border-bottom: 1px solid #c7e1e0;
+
+    .control-label {
+      min-width: 125px;
+      width: auto;
+    }
+
+    &[class*='focused'] {
+      
+      .b-select:after {
+        background-color: #c1e5e4;
+      }
+    }
+  }
+
+  .form-control {
+    color: $zeus;
+  }
+
+  textarea.form-control {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .b-select {
+    width: 70px;
+    background-color: transparent;
+
+    select {
+      height: 50px;
+      background-color: transparent;
+    }
+  }
+
+  .row .col-xs-6 {
+
+    &:first-child {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+
+  &-paid {
+    .form-control,
+    .form-control:disabled {
+      background-color: $green-light;
+      color: #000;
+    }
+  }
+}

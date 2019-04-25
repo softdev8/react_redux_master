@@ -1,0 +1,64 @@
+// _colors.scss
+
+// names taken from http://name-of-color.com/
+$zeus: #231f20;
+
+// BOOTSTRAP COLORS
+$success-text : #3c763d;
+$success-bg   : #dff0d8;
+
+$danger-text : #a94442;
+$danger-bg   : #f2dede;
+
+// colors palette
+$base-green  : #58bd91;
+$base-orange : #f4894d;
+$orange-light: #f5945e;
+$green-dark  : #4DA981; // #2ebc76
+$green-dark-text: #35765a;
+$green-light : #ebf8f8;
+$light-green-border: #9cd0bc;
+$light-grey  : #F0EDED;
+$toolbar-grey: #CDCCC8;
+$url-blue    : #417AEB;
+$light-grey-for-text: rgba(0, 0, 0, 0.5);
+$light-grey-for-icon: #ccc;
+$light-grey-for-icon2: rgba(0, 0, 0, 0.3);
+$light-grey-for-search-border: rgba(0, 0, 0, 0.3);
+$grey-for-icon: #adadad;
+$dark-gray-for-text: #494949;
+$gray-search-icon: #a1a1a1;
+$runjs-border-color: $base-green; // #40B5FF;
+$runjs-separator-color: $base-green; // #a0daff;
+$runjs-tabs-select: $runjs-separator-color;
+$gray-light-discounted-text: #777;
+$light-gray-icon-text: #777;
+$gray-border: #ddd;
+$caption-top-border: #ddd;
+$caption-bkg: #f2f2f2;
+$gray-border2: #ccc;
+$light-gray-border: #eee;
+$execErrorText: #cc0000;
+$execStdoutText: #00aa00;
+$codeJudgeSuccess: #4F8A10;
+$copyDownloadBtn: #999;
+$copyDownloadBtnHover: #ccc;
+$collection-sidebar-title: $green-dark;
+
+$base-quiz-color: #40B5FF;
+$judge-code-button1: $base-quiz-color;
+$judge-code-button2: #39a2e5;
+$judge-code-button3: #3390cc;
+
+$run-code-button1: $base-green;
+$run-code-button2: #4faa82;
+$run-code-button3: #469774;
+
+$landing-action-button1: $base-green;
+$landing-action-button2: #4faa82;
+$landing-action-button3: #469774;
+
+$html-link-color: #4488ff;
+
+$delete-color: #d9534f;
+$delete-hover-color: #c9302c;

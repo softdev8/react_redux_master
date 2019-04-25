@@ -1,0 +1,19 @@
+// _footer-to-bottom.scss
+
+.b-page_dashboard,
+.b-page_profile {
+  padding-bottom: 350px;
+}
+.b-page_sidebar {
+  padding-bottom: 0
+}
+
+@media (min-width: 768px) {
+  .b-page_dashboard,
+  .b-page_profile {
+    padding-bottom: 57px;
+  }
+  .b-page_sidebar {
+    padding-bottom: 0
+  }
+}
