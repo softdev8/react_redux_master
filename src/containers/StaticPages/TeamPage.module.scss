@@ -1,0 +1,38 @@
+.connect {
+  display: inline;
+
+  :global(.b-some-with-icon){
+    margin-bottom: 10px;
+    margin-left:4px;
+  }
+
+  :global(.linkedin-icon) {
+    width: 30px;
+    height: 30px;
+    fill: #1B85BC;
+    cursor: pointer;
+  }
+
+  :global(.twitter-icon-2) {
+    width: 20px;
+    height: 20px;
+    fill: #55ACEE;
+    cursor: pointer;
+  }
+
+  :global(.mail-icon) {
+    width: 22px;
+    height: 22px;
+    fill: #58bd91;
+    cursor: pointer;
+    margin-left: 2px;
+  }
+
+  :global(.globe-icon) {
+    width: 20px;
+    height: 20px;
+    fill: #58bd91;
+    cursor: pointer;
+    margin-left: 2px;
+  }
+}

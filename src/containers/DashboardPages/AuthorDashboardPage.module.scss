@@ -1,0 +1,14 @@
+.contentFilter {
+	padding-top: 88px
+}
+
+@media (min-width: 768px) {
+
+  .contentFilter {
+    padding-top: 58px;
+
+    :global(.form-horizontal) {
+      margin-left: 38px;
+    }
+  }
+}
