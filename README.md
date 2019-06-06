@@ -146,6 +146,5 @@ They will only show in development, but if you want to disable them even there, 
 ---
 Thanks for checking this out.
 
-– Erik Rasmussen, [@erikras](https://twitter.com/erikras)
 # react_redux_master
 
