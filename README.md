@@ -1,4 +1,4 @@
-# React Redux Universal Hot Example
+### React Redux Universal Hot Example
 ---
 [![build status](https://img.shields.io/travis/erikras/react-redux-universal-hot-example/master.svg?style=flat-square)](https://travis-ci.org/erikras/react-redux-universal-hot-example)
 [![react-redux-example channel on slack](https://img.shields.io/badge/slack-react--redux--example%40reactiflux-blue.svg)](http://www.reactiflux.com)
@@ -147,5 +147,5 @@ They will only show in development, but if you want to disable them even there, 
 Thanks for checking this out.
 
 – Erik Rasmussen, [@erikras](https://twitter.com/erikras)
-#   r e a c t _ r e d u x _ m a s t e r  
- 
+# react_redux_master
+
