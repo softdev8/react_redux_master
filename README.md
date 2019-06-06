@@ -137,7 +137,7 @@ To keep watching your test suites that you are working on, just set `singleRun: 
 
 #### Help! It doesn't work on Windows! What do I do?
 
-Fear not. [chtefi](https://github.com/chtefi) has figured out [what needs to be changed](https://github.com/erikras/react-redux-universal-hot-example/pull/21/files) to make it work on Windows 8.
+Fear not. [Spider](https://github.com/spiderdev86) has figured out [what needs to be changed](https://github.com/erikras/react-redux-universal-hot-example/pull/21/files) to make it work on Windows 8.
 
 #### How do I disable the dev tools?
 
